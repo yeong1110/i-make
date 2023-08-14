@@ -14,11 +14,15 @@
     <link rel="stylesheet" href="css/main.css">
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script type="text/javascript">
+        document.oncontextmenu = function(){return false;};
+    </script>
     <title>I가 만드는 세상</title>
 </head>
-<body>
+<body oncontextmenu="return false" onselectstart = "return false">
     <div class="wrap">
         <div class="cont">
             <header>
@@ -37,7 +41,7 @@
             </header>
             <article class="intro-wrap">
                 <div class="intro-cont">
-                    <h2>I가 만드는 세상</h2>
+                    <h2 class="intro-text">I가 만드는 세상</h2>
                     <h2>아이가 만드는 세상</h2>
                     <h2>愛가 만드는 세상</h2>
                     <h2>eye가 만드는 세상</h2>
@@ -58,7 +62,10 @@
                 </section>
             </article>
             <section class="interactive-section">
-                <h2 class="title">Interactive</h2>
+                <div class="title-area">
+                    <h2 class="title">Interactive</h2>
+                    <p>같이 만든 페이지에요</p>
+                </div>
                 <div class="interactive-wrap">
                     <ul>
                         <li>
@@ -82,7 +89,7 @@
                                 <img src="img/soon-green.svg" alt="수강신청">
                             </div>
                             <div class="interactive-text-cont">
-                                <p>수강신청 페이지</p>
+                                <p>성결대 수강신청 페이지</p>
                                 <div class="interactive-hover-cont">
                                         <div class="interactive-hover-area">
                                         <p>사이트 퍼블리싱했어요</p>
@@ -114,7 +121,10 @@
                 </div>
             </section>
             <section class="inovative-section">
-                <h2 class="title">Inovative</h2>
+                <div class="title-area">
+                    <h2 class="title">Inovative</h2>
+                    <p>이것저것 만들어본 페이지에요</p>
+                </div>
                 <div class="inovative-wrap">
                     <ul>
                         <li>
@@ -124,15 +134,17 @@
                             <div class="inovative-hover-cont">
                                 <div class="interactive-hover-area">
                                     <h4>Gurumi</h4>
+                                    <ul class="inovative-link-area">
+                                        <li><a target="_blank" href="https://www.figma.com/file/HJMVQ03XDSZ2oDNnqwPPXR/%EC%84%A4%EA%B3%84?type=design&node-id=210-2683&mode=design&t=bcQxZ7wFiqq3TG5W-0" class="btn-square">🧷figma</a></li>
+                                        <li><a target="_blank" href="https://drive.google.com/file/d/1g-FDIOf2auVZaJlpisY_TPjSyn5lfegH/view?usp=sharing" class="btn-square">🧷Storyboard</a></li>
+                                        <li><a target="_blank" href="https://drive.google.com/file/d/1XQPme3dEampUufiey4g0IYSYJQWnl89g/view?usp=sharing" class="btn-square">🧷기획서</a></li>
+                                    </ul>
                                     <p>html, css, scss, javascript, jquery</p>
                                     <p>기획부터 제작까지 전부 해봤어요</p>
-                                    <p>해당 story에 대해 알고 싶으시면 <a href="#">여기</a></p>
-                                    <ul class="btn-wrap">
-                                        <li><a target="_blank" href="http://yeong1110.dothome.co.kr/"class="btn-original">보러가기</a></li>
-                                        <li><a target="_blank" href="https://www.figma.com/file/HJMVQ03XDSZ2oDNnqwPPXR/%EC%84%A4%EA%B3%84?type=design&node-id=210-2683&mode=design&t=bcQxZ7wFiqq3TG5W-0" class="btn-original">figma</a></li>
-                                        <li><a target="_blank" href="https://drive.google.com/file/d/1g-FDIOf2auVZaJlpisY_TPjSyn5lfegH/view?usp=sharing" class="btn-original">Storyboard</a></li>
-                                        <li><a target="_blank" href="https://drive.google.com/file/d/1XQPme3dEampUufiey4g0IYSYJQWnl89g/view?usp=sharing" class="btn-original">기획서</a></li>
-                                    </ul>
+                                    <p>해당 story에 대해 알고 싶으시면 <a href="#" class="link-story">여기</a></p>
+                                    <div class="btn-wrap">
+                                        <a target="_blank" href="http://yeong1110.dothome.co.kr/"class="btn-original">보러가기</a>
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -145,7 +157,7 @@
                                     <h4>168cm</h4>
                                     <p>html, css, javascript, jquery</p>
                                     <p>카페24 쇼핑몰 cms 튜닝해봤어요</p>
-                                    <p>해당 story에 대해 알고 싶으시면 <a href="#">여기</a></p>
+                                    <p>해당 story에 대해 알고 싶으시면 <a href="#" class="link-story">여기</a></p>
                                     <div class="btn-wrap">
                                         <a href="https://yeong1110.cafe24.com/" class="btn-original">보러가기</a>
                                     </div>
@@ -154,61 +166,77 @@
                         </li>
                         <li>
                             <div class="inovative-img-cont">
-                                <img src="img/soon.svg" alt="준비중">
+                                <img src="img/soon.svg" alt="168cm">
                             </div>
-                            <p>준비중이에요</p>
+                            <div class="inovative-hover-cont">
+                                <div class="interactive-hover-area">
+                                    <h4>168cm</h4>
+                                    <p>html, css, javascript, jquery</p>
+                                    <p>카페24 쇼핑몰 cms 튜닝해봤어요</p>
+                                    <p>해당 story에 대해 알고 싶으시면 <a href="#" class="link-story">여기</a></p>
+                                    <div class="btn-wrap">
+                                        <a href="https://yeong1110.cafe24.com/" class="btn-original">보러가기</a>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </section>
             <section class="infinite-section">
-                <h2 class="title">infinite</h2>
+                <div class="title-area">
+                    <h2 class="title">infinite</h2>
+                    <p>페이지를 계속 만들겠다는 확고한 마음이 담겼어요</p>
+                </div>
                 <div class="infinite-swiper swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
-                        <div>
-                            <figure>
-                                <a href=""><img src="" alt=""></a>
-                                <figcaption>부트스트랩 리뉴얼</figcaption>
-                            </figure>
-                        </div>
+                        <a href="#" class="infinite-">
+                            <span class="infinite-img-cont">
+                                <img src="" alt="">
+                            </span>
+                            <span class="infinite-text">부트스트랩 리뉴얼</span>
+                        </a>
                     </div>
                     <div class="swiper-slide">
-                        <div>
-                            <figure>
-                                
-                                <figcaption>리액트 쇼핑몰</figcaption>
-                            </figure>
-                        </div>
+                        <a href="#" class="infinite-">
+                            <span class="infinite-img-cont">
+                                <img src="" alt="">
+                            </span>
+                            <span class="infinite-text">부트스트랩 리뉴얼</span>
+                        </a>
                     </div>
                     <div class="swiper-slide">
-                        <div>
-                            <figure>
-
-                                <figcaption>리액트 todo</figcaption>
-                            </figure>
-                        </div>
+                        <a href="#" class="infinite-">
+                            <span class="infinite-img-cont">
+                                <img src="" alt="">
+                            </span>
+                            <span class="infinite-text">부트스트랩 리뉴얼</span>
+                        </a>
                     </div>
                     <div class="swiper-slide">
-                        <div>
-                            <figure>
-
-                                <figcaption>리액트 todo</figcaption>
-                            </figure>
-                        </div>
+                        <a href="#" class="infinite-">
+                            <span class="infinite-img-cont">
+                                <img src="" alt="">
+                            </span>
+                            <span class="infinite-text">부트스트랩 리뉴얼</span>
+                        </a>
                     </div>
                     </div>
                     <!-- If we need navigation buttons -->
                     <div class="swiper-btn-wrap">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev infinite-swiper-button-prev"></div>
+                        <div class="swiper-button-next infinite-swiper-button-next"></div>
                     </div>
                 </div>
             </section>
             <section class="imagine-section">
-                <h2 class="title">imagine</h2>
+                <div class="title-area">
+                    <h2 class="title">imagine</h2>
+                    <p>이것저것 디자인해 봤어요</p>
+                </div>
                 <div class="imagine-wrap swiper">
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide">1

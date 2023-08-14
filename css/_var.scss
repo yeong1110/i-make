@@ -1,0 +1,101 @@
+$p100: 100%;
+$main-font-sz: 14px;
+$main-color: #E4EDC1;
+$lh: 1.5;
+
+html{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+
+body{
+    width: 80%;
+    margin: 0 auto;
+}
+
+a{
+    color: #000;
+}
+
+img{
+    width: $p100;
+    height: $p100;
+}
+
+h2{
+    font-size: 24px;
+}
+
+@mixin btn-original{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 32px;
+    background: #D9D9D9;
+    border-radius: 8px;
+    transition: box-shadow 0.36s ease;
+    &:hover{
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    }
+    &:focus-within{
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    }
+}
+
+@mixin btn-square{
+    position: relative;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    margin: 8px 0;
+    color: #fff;
+    text-decoration: underline;
+    transition: all 0.36s ease;
+    &:hover{
+        color: #E4EDC1;
+        text-decoration-color: #E4EDC1;
+    }
+}
+
+@mixin link{
+    position: relative;
+    font-weight: 600;
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1.5px;
+        background: #000;
+        transition: width 0.3s ease;
+    }
+    &:hover::before{
+        width: 100%;
+    }
+}
+
+@mixin title{
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+@mixin title-mgin{
+    margin-bottom: 32px;
+}
+
+.wrap{
+    width: 360px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.cont{
+    width: 90%;
+    margin: 0 auto;
+}

@@ -1,50 +1,23 @@
-html{
-    width: 100%;
-    height: 100%;
-    font-size: 14px;
-}
-
-body{
-    width: 80%;
-    margin: 0 auto;
-}
-
-a{
-    color: #000;
-}
-
-img{
-    width: 100%;
-}
-
-h2{
-    font-size: 24px;
-}
+@import 'var.scss';
 
 .btn-original{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 32px;
-    background: #D9D9D9;
-    border-radius: 8px;
+    @include btn-original()
+}
+
+.btn-square{
+    @include btn-square()
+}
+
+.link-story{
+    @include link()
 }
 
 .title{
-    font-size: 24px;
-    margin-bottom: 32px;
+    @include title()
 }
 
-.wrap{
-    width: 360px;
-    margin: 0 auto;
-    height: 100%;
-}
-
-.cont{
-    width: 90%;
-    margin: 0 auto;
+.title-area{
+    @include title-mgin()
 }
 
 header{
@@ -52,8 +25,11 @@ header{
         width: 100%;
         display: flex;
         justify-content: space-between;
+        padding: 10px 0;
         h1{
             a{
+                height: 30px;
+                display: flex;
                 img{}
             }
         }
@@ -82,13 +58,14 @@ header{
 
 .i-am-wrap{
         text-align: center;
+        line-height: $lh;
     h2{
         margin-top: 57px;
     }
     .i-am-photo-cont{
         width: 200px;
         margin: 24px auto;
-        background: #E4EDC1;
+        background: $main-color;
         img{
             
         }
@@ -102,22 +79,7 @@ header{
     }
     .i-am-text-2{
         a{
-            position: relative;
-            font-weight: 600;
-            &::before{
-                content: "";
-                display: block;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 0;
-                height: 1.5px;
-                background: #000;
-                transition: width 0.3s ease;
-            }
-            &:hover::before{
-                width: 100%;
-            }
+            @include link()
         }
     }
 }
@@ -134,7 +96,7 @@ header{
         display: grid;
         gap: 25px;
         padding: 25px 0;
-        background-color: #E4EDC1;
+        background-color: $main-color;
         border-radius: 36px;
         li{
             position: relative;
@@ -209,14 +171,13 @@ header{
 }
 
 .inovative-wrap{
-    ul{
+    >ul{
         display: grid;
         gap: 25px;
-        padding: 25px 0;
-        li{
+        >li{
             position: relative;
             height: 250px;
-            background: #E4EDC1;
+            background: $main-color;
             border-radius: 23px;
             .inovative-img-cont{
                 height: 100%;
@@ -241,8 +202,12 @@ header{
                 color: #fff;
                 .interactive-hover-area{
                     padding: 20px;
+                    .inovative-link-area{
+                        margin-bottom: 10px;
+                    }
                 }
                 h4{
+                    font-size: 16px;
                     font-weight: 700;
                     margin-bottom: 15px;
                 }
@@ -260,16 +225,9 @@ header{
             }
             .btn-wrap{
                 display: flex;
-                flex-wrap: wrap;
                 justify-content: space-around;
                 margin: 25px 0 0;
                 padding: 0;
-                gap: 10px;
-                row-gap: 20px;
-                li{
-                    background: none;
-                    height: auto;
-                }
             }
         }
     }
@@ -283,15 +241,25 @@ header{
 .infinite-section{
     margin-top: 30px;
     .swiper{
+        z-index: 0;
         .swiper-wrapper{
             .swiper-slide{
-                figure{
-                    width: 100px;
-                    height: 100px;
-                    background: #E4EDC1;
-                }
-                figcaption{
-                    margin-top: 3px;
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    overflow: hidden;
+                    .infinite-img-cont{
+                        height: 150px;
+                        background: $main-color;
+                        img{}
+                    }
+                    .infinite-text{
+                        margin: 10px 0;
+                        max-height: 30px;
+                        text-wrap: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
                 }
             }
         }
@@ -299,7 +267,7 @@ header{
             display: flex;
             margin-top: 8px;
         }
-        .swiper-button-next, .swiper-button-prev{
+        .infinite-swiper-button-next, .infinite-swiper-button-prev{
             position: relative;
             right: auto;
             left: auto;
@@ -307,7 +275,7 @@ header{
             margin-top: 0;
             color: #000;
         }
-        .swiper-button-next::after, .swiper-button-prev::after{
+        .infinite-swiper-button-next::after, .infinite-swiper-button-prev::after{
             width: 20px;
             height: 20px;
             background-image: url(../img/swiper-polygon.svg);
@@ -315,7 +283,7 @@ header{
             background-repeat: no-repeat;
             font-size: 0;
         }
-        .swiper-button-next::after{
+        .infinite-swiper-button-next::after{
             transform: rotateY(180deg);
         }
     }
@@ -329,22 +297,27 @@ header{
     height: 300px;
     margin-left: auto;
     margin-right: auto;
+    z-index: 0;
     .swiper-wrapper{
         flex-direction: row;
     }
     .swiper-slide{
         width: 100px;
         height: 100px;
-        background: #E4EDC1;
+        background: $main-color;
     }
     ul{
+        flex-wrap: wrap;
+        z-index: 0;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
         li{
             width: 100px;
-            height: 100px;
-            background: #E4EDC1;
+            height: 100px !important;
+            background: $main-color;
             margin: 0 0.8771929824561403%;
+            // height: calc((100% - 30px) / 2) !important;
             .imagine-img-wrap{
                 width: 100%;
                 height: 100%;
@@ -431,5 +404,6 @@ header{
 }
 
 footer{
-    padding-top: 60px;
+    padding: 60px 0 30px 0;
+    text-align: center;
 }
