@@ -47,12 +47,22 @@ header{
     display: flex;
     justify-content: center;
     .intro-cont{
+        position: relative;
+        width: 70%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
     }
     h2{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        text-align: end;
         font-size: 24px;
+        span{
+            // opacity: 0;
+        }
     }
 }
 
@@ -87,7 +97,6 @@ header{
 .interactive-section{
     margin-top: 68px;
     h2{
-        margin-bottom: 32px;
     }
 }
 
@@ -344,26 +353,26 @@ header{
     font-size: 40px;
     h3{
     }
-    .we-animate{
+    .we-animate-1{
         margin: 15px 0;
         display: flex;
         :first-child{
-            transform: rotate(-30.924deg);
+            // transform: rotate(-30.924deg);
         }
         :nth-child(2){
-            transform: rotate(12.565deg);
+            // transform: rotate(12.565deg);
         }
         :nth-child(3){
-            transform: rotate(-14.849deg);
+            // transform: rotate(-14.849deg);
         }
         :last-child{
-            transform: rotate(23.129deg);
+            // transform: rotate(23.129deg);
         }
     }
 }
 
 .we-text-cont{
-    margin: 35px 0 40px 0;
+    margin: 35px 0 80px 0;
     display: flex;
     align-items: center;
     justify-content: center;
