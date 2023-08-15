@@ -86,7 +86,7 @@ $(function(){
           delay: 4, 
           ease: "power1.inOut"
         },
-        markers: true
+        // markers: true
       },
       translate: 'none',
     });
