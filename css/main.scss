@@ -306,7 +306,7 @@ header{
     height: 300px;
     margin-left: auto;
     margin-right: auto;
-    z-index: 0;
+    z-index: -1;
     .swiper-wrapper{
         flex-direction: row;
     }
@@ -326,6 +326,7 @@ header{
             height: 100px !important;
             background: $main-color;
             margin: 0 0.8771929824561403%;
+            z-index: 0;
             // height: calc((100% - 30px) / 2) !important;
             .imagine-img-wrap{
                 width: 100%;
