@@ -22,7 +22,12 @@ $(function(){
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
         },
-    
+        breakpoints: {
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        },
     });
     
     setSwiper('.imagine-wrap',{
@@ -44,7 +49,7 @@ $(function(){
         trigger: ".intro-wrap",
         pin: true,   // pin the trigger element while active
         start: "top top", // when the top of the trigger hits the top of the viewport
-        end: "+=500", // end after scrolling 500px beyond the start
+        end: "+=800", // end after scrolling 500px beyond the start
         scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         snap: {
           snapTo: "labels", // snap to the closest label in the timeline
@@ -124,6 +129,16 @@ $(function(){
       });
       weTl.to(entry, { delay: delay, duration: dur, opacity: 1, y: 0 });
   });
+
+  // gsap.to(".interactive-section", {
+  //   scrollTrigger: {
+  //     trigger: ".interactive-section",
+  //     pin: true,
+  //     // start: "top 10",
+  //     // end: "bottom center",
+  //   },
+  //   ypercent: 100,
+  // })
 
     // gsap.to('.we-animate-2 h4',{
     //   scrollTrigger: {
