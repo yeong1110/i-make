@@ -1,9 +1,11 @@
 gsap.registerPlugin(ScrollTrigger);
+AOS.init();
 
 gsap.set('.intro-cont span',{opacity:0})
 gsap.set('.we-animate-cont h3',{opacity:0, y: -50})
 gsap.set('.we-animate-1 p',{x: 100, y:50})
 gsap.set('.we-animate-2 h4',{opacity: 0})
+gsap.set('.intro-after-wrap',{opacity: 0})
 gsap.set(".we-elm", { y: 100, opacity: 0 })
 
 var delay = 0;
@@ -42,7 +44,7 @@ $(function(){
         trigger: ".intro-wrap",
         pin: true,   // pin the trigger element while active
         start: "top top", // when the top of the trigger hits the top of the viewport
-        end: "+=1000", // end after scrolling 500px beyond the start
+        end: "+=500", // end after scrolling 500px beyond the start
         scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         snap: {
           snapTo: "labels", // snap to the closest label in the timeline
@@ -63,16 +65,8 @@ $(function(){
     .addLabel("text-3").to(".intro-text-3",{opacity: 1})
     .addLabel("text-3-2").to(".intro-text-3",{opacity: 0})
     .addLabel("text-4").to(".intro-text-4",{opacity: 1})
+    .addLabel(".s").to(".intro-after-wrap", {autoAlpha:1})
   
-    gsap.to('.we-animate-cont h3',{
-      scrollTrigger: {
-        trigger: ".we-animate-cont h3",
-        pin: true,
-        // markers: true,
-      },
-      y: 0,
-      opacity: 1,
-    });
   
     let we = gsap.timeline({
       scrollTrigger: {
@@ -97,7 +91,7 @@ $(function(){
     .to('.i-1', {x: 0, y:0, scale: 1.2})
     .addLabel('start2')
     .from('.i-2', {autoAlpha: 0 })
-    .to('.i-2', {rotation: -30.924, x: 0, y:0, scale: 1.2})
+    .to('.i-2', {rotation: -15.924, x: 0, y:0, scale: 1.2})
     .addLabel('start3')
     .from('.i-3', {autoAlpha: 0 })
     .to('.i-3', {rotation: -14.849, x: 0, y:0, scale: 1.2})

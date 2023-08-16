@@ -11,12 +11,14 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript">
         document.oncontextmenu = function(){return false;};
     </script>
@@ -25,6 +27,7 @@
 <body oncontextmenu="return false" onselectstart = "return false">
     <div class="wrap">
         <div class="cont">
+            <!-- header -->
             <header>
                 <nav>
                     <h1>
@@ -39,6 +42,7 @@
                     </ul>
                 </nav>
             </header>
+            <!-- intro -->
             <article class="intro-wrap">
                 <div class="intro-cont">
                     <h2 ><span class="intro-text-1">I</span>가 만드는 세상</h2>
@@ -47,260 +51,263 @@
                     <h2><span class="intro-text-4">eye</span>가 만드는 세상</h2>
                 </div>
             </article>
-            <article class="i-am-wrap" id="i-am">
-                <h2>I am…</h2>
-                <div class="i-am-photo-cont">
-                    <img src="img/photo.png" alt="3d 캐릭터"></div>
-                <section class="i-am-text-1" >
-                    <h3>나는 유저와 상호작용하는 것을 좋아하는 사람</h3>
-                    <h3>나는 혁신적인 사람</h3>
-                    <h3>나는 끝없이 배움을 추구하는 사람</h3>
-                </section>
-                <section class="i-am-text-2">
-                    <h4>Do you want more?</h4>
-                    <p>Here is my <a href="https://kindhearted-echinodon-ff4.notion.site/2067fa8e82c545849c88a286cb2aba58">notion resume!</a></p>
-                </section>
-            </article>
-            <section class="interactive-section">
-                <div class="title-area">
-                    <h2 class="title">Interactive</h2>
-                    <p>같이 만든 페이지에요</p>
-                </div>
-                <div class="interactive-wrap">
-                    <ul>
-                        <li class="we-elm">
-                            <div class="interactive-img-cont">
-                                <img src="img/soon-green.svg" alt="단어장">
-                            </div>
-                            <div class="interactive-text-cont">
-                                <p>단어장 프로젝트</p>
-                                <div class="interactive-hover-cont">
-                                    <div class="interactive-hover-area">
-                                        <p>react로 만들었어요</p>
-                                        <p>맡은 분야: 디자인, 퍼블리싱</p>
-                                        <p>협업 툴: notion, github</p>
-                                        <p>링크는 준비중이에요</p>
-                                    </div>
+            <div class="intro-after-wrap">
+                <article class="i-am-wrap" id="i-am">
+                    <h2>I am…</h2>
+                    <div class="i-am-photo-cont">
+                        <img src="img/photo.png" alt="3d 캐릭터"></div>
+                    <section class="i-am-text-1" >
+                        <h3 data-aos="fade-up">나는 유저와 상호작용하는 것을 좋아하는 사람</h3>
+                        <h3 data-aos="fade-up">나는 혁신적인 사람</h3>
+                        <h3 data-aos="fade-up">나는 끝없이 배움을 추구하는 사람</h3>
+                    </section>
+                    <section class="i-am-text-2">
+                        <h4>Do you want more?</h4>
+                        <p>Here is my <a href="https://kindhearted-echinodon-ff4.notion.site/2067fa8e82c545849c88a286cb2aba58">notion resume!</a></p>
+                    </section>
+                </article>
+                <section class="interactive-section">
+                    <div class="title-area">
+                        <h2 class="title" data-aos="fade-up">Interactive</h2>
+                        <p data-aos="fade-up">같이 만든 페이지에요</p>
+                    </div>
+                    <div class="interactive-wrap">
+                        <ul data-aos="fade-up">
+                            <li class="we-elm">
+                                <div class="interactive-img-cont">
+                                    <img src="img/soon-green.svg" alt="단어장">
                                 </div>
-                            </div>
-                        </li>
-                        <li class="we-elm">
-                            <div class="interactive-img-cont">
-                                <img src="img/soon-green.svg" alt="수강신청">
-                            </div>
-                            <div class="interactive-text-cont">
-                                <p>성결대 수강신청 페이지</p>
-                                <div class="interactive-hover-cont">
+                                <div class="interactive-text-cont">
+                                    <p>단어장 프로젝트</p>
+                                    <div class="interactive-hover-cont">
                                         <div class="interactive-hover-area">
-                                        <p>사이트 퍼블리싱했어요</p>
-                                        <p>맡은 분야: 디자인, 퍼블리싱</p>
-                                        <p>협업 툴: figma, github</p>
-                                        <div class="btn-wrap">
-                                            <a href="https://sugang.sungkyul.ac.kr/login/Login.jsp" class="btn-original">보러가기</a>
+                                            <p>react로 만들었어요</p>
+                                            <p>맡은 분야: 디자인, 퍼블리싱</p>
+                                            <p>협업 툴: notion, github</p>
+                                            <p>링크는 준비중이에요</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="we-elm">
-                            <div class="interactive-img-cont">
-                                <img src="img/soon-green.svg" alt="준비중">
-                            </div>
-                            <div class="interactive-text-cont">
-                                <p>준비중이에요</p>
-                                <div class="interactive-hover-cont">
-                                        <div class="interactive-hover-area">
-                                        <p>준비중이에요</p>
-                                        <p>맡은 분야: 디자인, 퍼블리싱</p>
-                                        <p>협업 툴: figma, github</p>
+                            </li>
+                            <li class="we-elm">
+                                <div class="interactive-img-cont">
+                                    <img src="img/soon-green.svg" alt="수강신청">
+                                </div>
+                                <div class="interactive-text-cont">
+                                    <p>성결대 수강신청 페이지</p>
+                                    <div class="interactive-hover-cont">
+                                            <div class="interactive-hover-area">
+                                            <p>사이트 퍼블리싱했어요</p>
+                                            <p>맡은 분야: 디자인, 퍼블리싱</p>
+                                            <p>협업 툴: figma, github</p>
+                                            <div class="btn-wrap">
+                                                <a href="https://sugang.sungkyul.ac.kr/login/Login.jsp" class="btn-original">보러가기</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="inovative-section">
-                <div class="title-area">
-                    <h2 class="title">Inovative</h2>
-                    <p>이것저것 만들어본 페이지에요</p>
-                </div>
-                <div class="inovative-wrap">
-                    <ul>
-                        <li class="we-elm">
-                            <div class="inovative-img-cont">
-                                <img src="img/soon.svg" alt="구르미">
-                            </div>
-                            <div class="inovative-hover-cont">
-                                <div class="interactive-hover-area">
-                                    <h4>Gurumi</h4>
-                                    <ul class="inovative-link-area">
-                                        <li><a target="_blank" href="https://www.figma.com/file/HJMVQ03XDSZ2oDNnqwPPXR/%EC%84%A4%EA%B3%84?type=design&node-id=210-2683&mode=design&t=bcQxZ7wFiqq3TG5W-0" class="btn-square">🧷figma</a></li>
-                                        <li><a target="_blank" href="https://drive.google.com/file/d/1g-FDIOf2auVZaJlpisY_TPjSyn5lfegH/view?usp=sharing" class="btn-square">🧷Storyboard</a></li>
-                                        <li><a target="_blank" href="https://drive.google.com/file/d/1XQPme3dEampUufiey4g0IYSYJQWnl89g/view?usp=sharing" class="btn-square">🧷기획서</a></li>
-                                    </ul>
-                                    <p>html, css, scss, javascript, jquery</p>
-                                    <p>기획부터 제작까지 전부 해봤어요</p>
-                                    <p>해당 story에 대해 알고 싶으시면 <a href="#" class="link-story">여기</a></p>
-                                    <div class="btn-wrap">
-                                        <a target="_blank" href="http://yeong1110.dothome.co.kr/"class="btn-original">보러가기</a>
+                            </li>
+                            <li class="we-elm">
+                                <div class="interactive-img-cont">
+                                    <img src="img/soon-green.svg" alt="준비중">
+                                </div>
+                                <div class="interactive-text-cont">
+                                    <p>준비중이에요</p>
+                                    <div class="interactive-hover-cont">
+                                            <div class="interactive-hover-area">
+                                            <p>준비중이에요</p>
+                                            <p>맡은 분야: 디자인, 퍼블리싱</p>
+                                            <p>협업 툴: figma, github</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="we-elm">
-                            <div class="inovative-img-cont">
-                                <img src="img/soon.svg" alt="168cm">
-                            </div>
-                            <div class="inovative-hover-cont">
-                                <div class="interactive-hover-area">
-                                    <h4>168cm</h4>
-                                    <p>html, css, javascript, jquery</p>
-                                    <p>카페24 쇼핑몰 cms 튜닝해봤어요</p>
-                                    <p>해당 story에 대해 알고 싶으시면 <a href="#" class="link-story">여기</a></p>
-                                    <div class="btn-wrap">
-                                        <a href="https://yeong1110.cafe24.com/" class="btn-original">보러가기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="inovative-section">
+                    <div class="title-area">
+                        <h2 class="title" data-aos="fade-up">Inovative</h2>
+                        <p data-aos="fade-up">이것저것 만들어본 페이지에요</p>
+                    </div>
+                    <div class="inovative-wrap">
+                        <ul data-aos="fade-up">
+                            <li class="we-elm">
+                                <div class="inovative-img-cont">
+                                    <img src="img/soon.svg" alt="구르미">
+                                </div>
+                                <div class="inovative-hover-cont">
+                                    <div class="interactive-hover-area">
+                                        <h4>Gurumi</h4>
+                                        <ul class="inovative-link-area">
+                                            <li><a target="_blank" href="https://www.figma.com/file/HJMVQ03XDSZ2oDNnqwPPXR/%EC%84%A4%EA%B3%84?type=design&node-id=210-2683&mode=design&t=bcQxZ7wFiqq3TG5W-0" class="btn-square">🧷figma</a></li>
+                                            <li><a target="_blank" href="https://drive.google.com/file/d/1g-FDIOf2auVZaJlpisY_TPjSyn5lfegH/view?usp=sharing" class="btn-square">🧷Storyboard</a></li>
+                                            <li><a target="_blank" href="https://drive.google.com/file/d/1XQPme3dEampUufiey4g0IYSYJQWnl89g/view?usp=sharing" class="btn-square">🧷기획서</a></li>
+                                        </ul>
+                                        <p>html, css, scss, javascript, jquery</p>
+                                        <p>기획부터 제작까지 전부 해봤어요</p>
+                                        <p>해당 story에 대해 알고 싶으시면 <a href="#" class="link-story">여기</a></p>
+                                        <div class="btn-wrap">
+                                            <a target="_blank" href="http://yeong1110.dothome.co.kr/"class="btn-original">보러가기</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="we-elm">
-                            <div class="inovative-img-cont">
-                                <img src="img/soon.svg" alt="168cm">
-                            </div>
-                            <div class="inovative-hover-cont">
-                                <div class="interactive-hover-area">
-                                    <h4>168cm</h4>
-                                    <p>html, css, javascript, jquery</p>
-                                    <p>카페24 쇼핑몰 cms 튜닝해봤어요</p>
-                                    <p>해당 story에 대해 알고 싶으시면 <a href="#" class="link-story">여기</a></p>
-                                    <div class="btn-wrap">
-                                        <a href="https://yeong1110.cafe24.com/" class="btn-original">보러가기</a>
+                            </li>
+                            <li class="we-elm">
+                                <div class="inovative-img-cont">
+                                    <img src="img/soon.svg" alt="168cm">
+                                </div>
+                                <div class="inovative-hover-cont">
+                                    <div class="interactive-hover-area">
+                                        <h4>168cm</h4>
+                                        <p>html, css, javascript, jquery</p>
+                                        <p>카페24 쇼핑몰 cms 튜닝해봤어요</p>
+                                        <p>해당 story에 대해 알고 싶으시면 <a href="#" class="link-story">여기</a></p>
+                                        <div class="btn-wrap">
+                                            <a href="https://yeong1110.cafe24.com/" class="btn-original">보러가기</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="infinite-section">
-                <div class="title-area">
-                    <h2 class="title">infinite</h2>
-                    <p>페이지를 계속 만들겠다는 확고한 마음이 담겼어요</p>
-                </div>
-                <div class="infinite-swiper swiper we-elm">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <a href="#" class="infinite-">
-                            <span class="infinite-img-cont">
+                            </li>
+                            <li class="we-elm">
+                                <div class="inovative-img-cont">
+                                    <img src="img/soon.svg" alt="168cm">
+                                </div>
+                                <div class="inovative-hover-cont">
+                                    <div class="interactive-hover-area">
+                                        <h4>168cm</h4>
+                                        <p>html, css, javascript, jquery</p>
+                                        <p>카페24 쇼핑몰 cms 튜닝해봤어요</p>
+                                        <p>해당 story에 대해 알고 싶으시면 <a href="#" class="link-story">여기</a></p>
+                                        <div class="btn-wrap">
+                                            <a href="https://yeong1110.cafe24.com/" class="btn-original">보러가기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="infinite-section">
+                    <div class="title-area">
+                        <h2 class="title" data-aos="fade-up">infinite</h2>
+                        <p data-aos="fade-up">페이지를 계속 만들겠다는 확고한 마음이 담겼어요</p>
+                    </div>
+                    <div class="infinite-swiper swiper we-elm">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide" data-aos="fade-up">
+                            <a href="#" class="infinite-">
+                                <span class="infinite-img-cont">
+                                    <img src="" alt="">
+                                </span>
+                                <span class="infinite-text">부트스트랩 리뉴얼</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide" data-aos="fade-up">
+                            <a href="#" class="infinite-">
+                                <span class="infinite-img-cont">
+                                    <img src="" alt="">
+                                </span>
+                                <span class="infinite-text">부트스트랩 리뉴얼</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide" data-aos="fade-up">
+                            <a href="#" class="infinite-">
+                                <span class="infinite-img-cont">
+                                    <img src="" alt="">
+                                </span>
+                                <span class="infinite-text">부트스트랩 리뉴얼</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide" data-aos="fade-up">
+                            <a href="#" class="infinite-">
+                                <span class="infinite-img-cont">
+                                    <img src="" alt="">
+                                </span>
+                                <span class="infinite-text">부트스트랩 리뉴얼</span>
+                            </a>
+                        </div>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-btn-wrap">
+                            <div class="swiper-button-prev infinite-swiper-button-prev"></div>
+                            <div class="swiper-button-next infinite-swiper-button-next"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="imagine-section">
+                    <div class="title-area">
+                        <h2 class="title" data-aos="fade-up">imagine</h2>
+                        <p data-aos="fade-up">이것저것 디자인해 봤어요</p>
+                    </div>
+                    <div class="imagine-wrap swiper we-elm">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide" data-aos="fade-up">1
+                                <div class="imagine-img-wrap">
+                                    <img src="" alt="">
+                                </div>
+                            </li>
+                            <li class="swiper-slide" data-aos="fade-up">2
                                 <img src="" alt="">
-                            </span>
-                            <span class="infinite-text">부트스트랩 리뉴얼</span>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="infinite-">
-                            <span class="infinite-img-cont">
+                            </li>                
+                            <li class="swiper-slide" data-aos="fade-up">3
                                 <img src="" alt="">
-                            </span>
-                            <span class="infinite-text">부트스트랩 리뉴얼</span>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="infinite-">
-                            <span class="infinite-img-cont">
+                            </li>                
+                            <li class="swiper-slide" data-aos="fade-up">4
                                 <img src="" alt="">
-                            </span>
-                            <span class="infinite-text">부트스트랩 리뉴얼</span>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="infinite-">
-                            <span class="infinite-img-cont">
+                            </li>                
+                            <li class="swiper-slide" data-aos="fade-up">5
                                 <img src="" alt="">
-                            </span>
-                            <span class="infinite-text">부트스트랩 리뉴얼</span>
-                        </a>
-                    </div>
-                    </div>
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-btn-wrap">
-                        <div class="swiper-button-prev infinite-swiper-button-prev"></div>
-                        <div class="swiper-button-next infinite-swiper-button-next"></div>
-                    </div>
-                </div>
-            </section>
-            <section class="imagine-section">
-                <div class="title-area">
-                    <h2 class="title">imagine</h2>
-                    <p>이것저것 디자인해 봤어요</p>
-                </div>
-                <div class="imagine-wrap swiper we-elm">
-                    <ul class="swiper-wrapper">
-                        <li class="swiper-slide">1
-                            <div class="imagine-img-wrap">
+                            </li>                
+                            <li class="swiper-slide" data-aos="fade-up">6
                                 <img src="" alt="">
-                            </div>
-                        </li>
-                        <li class="swiper-slide">2
-                            <img src="" alt="">
-                        </li>                
-                        <li class="swiper-slide">3
-                            <img src="" alt="">
-                        </li>                
-                        <li class="swiper-slide">4
-                            <img src="" alt="">
-                        </li>                
-                        <li class="swiper-slide">5
-                            <img src="" alt="">
-                        </li>                
-                        <li class="swiper-slide">6
-                            <img src="" alt="">
-                        </li>
-                        <li class="swiper-slide">7
-                            <img src="" alt="">
-                        </li>
-                        <li class="swiper-slide">8
-                            <img src="" alt="">
-                        </li>
-                    </ul>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </section>
-            <article class="contact-wrap">
-                <div class="we-animate-cont">
-                    <h3>I</h3>
-                    <div class="we-animate-1">
-                        <p class="i-2">I</p>
-                        <p class="i-1">I</p>
-                        <p class="i-3">I</p>
-                        <p class="i-4">I</p>
-                        <span class="i-5">e</span>
+                            </li>
+                            <li class="swiper-slide" data-aos="fade-up">7
+                                <img src="" alt="">
+                            </li>
+                            <li class="swiper-slide" data-aos="fade-up">8
+                                <img src="" alt="">
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="we-animate-2">
-                        <h4>WE</h4>
+                </section>
+                <article class="contact-wrap">
+                    <div class="we-animate-cont">
+                        <h3>I</h3>
+                        <div class="we-animate-1">
+                            <p class="i-2">I</p>
+                            <p class="i-1">I</p>
+                            <p class="i-3">I</p>
+                            <p class="i-4">I</p>
+                            <span class="i-5">e</span>
+                        </div>
+                        <div class="we-animate-2">
+                            <h4>WE</h4>
+                        </div>
                     </div>
-                </div>
-                <div class="we-text-cont">
-                    <div class="we-text-area">
-                        <p class="we-text-1 we-elm">I였던 저는 이제</p>
-                        <p class="we-text-1 we-elm" >We가 되어</p>
-                        <p class="we-text-1 we-elm" >같이 세상을</p>
-                        <p class="we-text-1 we-elm" >만들어가고 싶습니다</p>
+                    <div class="we-text-cont">
+                        <div class="we-text-area" data-aos="fade-up">
+                            <p class="we-text-1 we-elm">I였던 저는 이제</p>
+                            <p class="we-text-1 we-elm" >We가 되어</p>
+                            <p class="we-text-1 we-elm" >같이 세상을</p>
+                            <p class="we-text-1 we-elm" >만들어가고 싶습니다</p>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article class="email-wrap">
-                <div class="email-cont">
-                    <h3>언제든지 연락주세요</h3>
-                    <p>a0257942@gmail.com</p>
-                </div>
-                <div class="thank-cont">
-                    <p>감사합니다</p>
-                </div>
-            </article>
+                </article>
+                <article class="email-wrap">
+                    <div class="email-cont">
+                        <h3 data-aos="fade-up">언제든지 연락주세요</h3>
+                        <p data-aos="fade-up">a0257942@gmail.com</p>
+                    </div>
+                    <div class="thank-cont">
+                        <p>감사합니다</p>
+                    </div>
+                </article>
+
+            </div>
             <footer>
                 <p>copyright by 2023 yeongeun</p>
             </footer>
