@@ -237,18 +237,33 @@ header nav ul li {
   border-radius: 23px;
   overflow: hidden;
 }
-.interactive-wrap ul li:hover .interactive-wrap ul li.interactive-text-cont {
+.interactive-wrap ul li:hover .interactive-text-cont {
   top: 0;
   border-radius: 23px;
   background: #fff;
 }
-.interactive-wrap ul li :last-of-type {
+.interactive-wrap ul li:hover .interactive-hover-cont {
+  visibility: visible;
+  opacity: 1;
+}
+.interactive-wrap ul li:first-of-type .interactive-img-cont img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: scale(0.4);
+}
+.interactive-wrap ul li:last-of-type {
   margin: 0 auto;
 }
 .interactive-wrap ul li .interactive-img-cont {
-  height: 150px;
+  height: 100%;
   border-radius: 23px;
   overflow: hidden;
+}
+.interactive-wrap ul li .interactive-img-cont img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 .interactive-wrap ul li .interactive-text-cont {
   position: absolute;
@@ -257,6 +272,7 @@ header nav ul li {
   width: 100%;
   height: 100%;
   transition: top 0.25s ease;
+  background: rgba(255, 255, 255, 0.5411764706);
 }
 .interactive-wrap ul li .interactive-text-cont p {
   padding: 15px 0;
@@ -280,17 +296,8 @@ header nav ul li {
 }
 .interactive-wrap ul li .btn-wrap {
   margin: 12px 0;
-}
-
-.interactive-wrap ul li:hover .interactive-text-cont {
-  top: 0;
-  border-radius: 23px;
-  background: #fff;
-}
-
-.interactive-wrap ul li:hover .interactive-hover-cont {
-  visibility: visible;
-  opacity: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .inovative-section {
@@ -307,10 +314,23 @@ header nav ul li {
   background: #E4EDC1;
   border-radius: 23px;
 }
+.inovative-wrap > ul > li:hover .inovative-hover-cont {
+  visibility: visible;
+  opacity: 1;
+}
+.inovative-wrap > ul > li:hover .inovative-img-cont {
+  filter: blur(5px);
+}
 .inovative-wrap > ul > li .inovative-img-cont {
   height: 100%;
   border-radius: 23px;
   overflow: hidden;
+}
+.inovative-wrap > ul > li .inovative-img-cont img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 .inovative-wrap > ul > li p {
   text-align: center;
@@ -330,6 +350,9 @@ header nav ul li {
 }
 .inovative-wrap > ul > li .inovative-hover-cont .interactive-hover-area {
   padding: 20px;
+}
+.inovative-wrap > ul > li .inovative-hover-cont .interactive-hover-area .link-story::before {
+  background: #fff;
 }
 .inovative-wrap > ul > li .inovative-hover-cont .interactive-hover-area .inovative-link-area {
   margin-bottom: 10px;
@@ -357,38 +380,37 @@ header nav ul li {
   padding: 0;
 }
 
-.inovative-wrap ul li:hover .inovative-hover-cont {
-  visibility: visible;
-  opacity: 1;
-}
-
-.infinite-section {
+.inovative-wrap ul li .infinite-section {
   margin-top: 30px;
 }
-.infinite-section .swiper {
+.inovative-wrap ul li .infinite-section .swiper {
   z-index: 0;
 }
-.infinite-section .swiper .swiper-wrapper .swiper-slide a {
+.inovative-wrap ul li .infinite-section .swiper .swiper-wrapper .swiper-slide a {
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
-.infinite-section .swiper .swiper-wrapper .swiper-slide a .infinite-img-cont {
+.inovative-wrap ul li .infinite-section .swiper .swiper-wrapper .swiper-slide a .infinite-img-cont {
   height: 150px;
   background: #E4EDC1;
 }
-.infinite-section .swiper .swiper-wrapper .swiper-slide a .infinite-text {
+.inovative-wrap ul li .infinite-section .swiper .swiper-wrapper .swiper-slide a .infinite-img-cont img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.inovative-wrap ul li .infinite-section .swiper .swiper-wrapper .swiper-slide a .infinite-text {
   margin: 10px 0;
   max-height: 30px;
   text-wrap: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.infinite-section .swiper .swiper-btn-wrap {
+.inovative-wrap ul li .infinite-section .swiper .swiper-btn-wrap {
   display: flex;
   margin-top: 8px;
 }
-.infinite-section .swiper .infinite-swiper-button-next, .infinite-section .swiper .infinite-swiper-button-prev {
+.inovative-wrap ul li .infinite-section .swiper .infinite-swiper-button-next, .inovative-wrap ul li .infinite-section .swiper .infinite-swiper-button-prev {
   position: relative;
   right: auto;
   left: auto;
@@ -396,7 +418,7 @@ header nav ul li {
   margin-top: 0;
   color: #000;
 }
-.infinite-section .swiper .infinite-swiper-button-next::after, .infinite-section .swiper .infinite-swiper-button-prev::after {
+.inovative-wrap ul li .infinite-section .swiper .infinite-swiper-button-next::after, .inovative-wrap ul li .infinite-section .swiper .infinite-swiper-button-prev::after {
   width: 20px;
   height: 20px;
   background-image: url(../img/swiper-polygon.svg);
@@ -404,7 +426,7 @@ header nav ul li {
   background-repeat: no-repeat;
   font-size: 0;
 }
-.infinite-section .swiper .infinite-swiper-button-next::after {
+.inovative-wrap ul li .infinite-section .swiper .infinite-swiper-button-next::after {
   transform: rotateY(180deg);
 }
 
@@ -434,11 +456,19 @@ header nav ul li {
   background: #E4EDC1;
   margin: 0 0.8771929825%;
   z-index: 0;
+  border-radius: 4px;
+  overflow: hidden;
 }
 .imagine-wrap ul li .imagine-img-wrap {
   width: 100%;
   height: 100%;
   margin-right: 10px;
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+}
+.imagine-wrap ul li .imagine-img-wrap img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .imagine-wrap .swiper-pagination-progressbar {
   top: inherit;
@@ -530,6 +560,9 @@ footer {
   section {
     margin-bottom: 200px;
   }
+  .btn-original {
+    padding: 3px 5px;
+  }
   header {
     position: sticky;
     top: 0;
@@ -608,10 +641,16 @@ footer {
   .interactive-wrap ul li .interactive-hover-cont p {
     line-height: 1.5;
   }
+  .inovative-wrap > ul > li .inovative-hover-cont .interactive-hover-area {
+    padding: 40px;
+  }
+  .inovative-wrap > ul > li .inovative-hover-cont .interactive-hover-area h4 {
+    font-size: 20px;
+  }
   .inovative-wrap ul {
     grid-auto-rows: 300px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 300px);
+    grid-template-rows: repeat(3, 380px);
   }
   .inovative-elm-1 {
     grid-column: 1;

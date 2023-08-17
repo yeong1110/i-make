@@ -3,15 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="yoengeun" />
+    <meta
+    property="description"
+    content="I가 만드는 세상에 오신 것을 환영합니다.
+    I가 여태까지 쌓아온 스킬들과 웹 서비스들을 둘러보세요.
+    이상 웹 퍼블리셔를 꿈꾸는 I의 설명이었습니다." />
+    <meta
+    property="og:image"
+    content="img/I-logo.svg" />
+    <meta 
+    property="og:description"
+    content="I가 만드는 세상에 오신 것을 환영합니다.
+    I가 여태까지 쌓아온 스킬들과 웹 서비스들을 둘러보세요.
+    이상 웹 퍼블리셔를 꿈꾸는 I의 설명이었습니다."
+    />
+    <meta property="og:title" content="how I make my world" />
+    <meta name="twitter:title" content="how I make my world" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#2c2a6e">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
@@ -51,7 +75,9 @@
                     <h2><span class="intro-text-4">eye</span>가 만드는 세상</h2>
                 </div>
             </article>
+            <!-- intro-after -->
             <div class="intro-after-wrap">
+                <!-- info -->
                 <article class="i-am-wrap" id="i-am">
                     <h2>I am…</h2>
                     <div class="i-am-photo-cont">
@@ -70,7 +96,7 @@
                 <article class="i-can-wrap">
                     <h2>I can…</h2>
                     <section class="i-can-text-cont">
-                        <ul data-aos="fade-up" data-aos-delay="1000" data-aos-duration="500">
+                        <ul data-aos="fade-up" data-aos-delay="700" data-aos-duration="500">
                             <li>
                                 <h3>HTML5</h3>
                                 <p>웹표준& 웹접근성에 맞춰 작업할 수 있어요</p>
@@ -98,6 +124,7 @@
                         </ul>
                     </section>
                 </article>
+                <!-- interactiive -->
                 <section class="interactive-section" id="interactive">
                     <div class="title-area">
                         <h2 class="title" data-aos="fade-up" >Interactive</h2>
@@ -107,7 +134,7 @@
                         <ul data-aos="fade-up">
                             <li class="we-elm">
                                 <div class="interactive-img-cont">
-                                    <img src="img/soon-green.svg" alt="단어장">
+                                    <img src="img/interactive/logo.svg" alt="단어장">
                                 </div>
                                 <div class="interactive-text-cont">
                                     <p>단어장 프로젝트</p>
@@ -116,14 +143,16 @@
                                             <p>react로 만들었어요</p>
                                             <p>맡은 분야: 디자인, 퍼블리싱</p>
                                             <p>협업 툴: notion, github</p>
-                                            <p>링크는 준비중이에요</p>
+                                            <div class="btn-wrap">
+                                                <a href="http://wordbook.kro.kr/" class="btn-original">보러가기</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="we-elm">
                                 <div class="interactive-img-cont">
-                                    <img src="img/soon-green.svg" alt="수강신청">
+                                    <img src="img/interactive/inter-2.png" alt="수강신청">
                                 </div>
                                 <div class="interactive-text-cont">
                                     <p>성결대 수강신청 페이지</p>
@@ -148,8 +177,8 @@
                                     <div class="interactive-hover-cont">
                                             <div class="interactive-hover-area">
                                             <p>준비중이에요</p>
-                                            <p>맡은 분야: 디자인, 퍼블리싱</p>
-                                            <p>협업 툴: figma, github</p>
+                                            <p>맡은 분야: 퍼블리싱</p>
+                                            <p>협업 툴: github</p>
                                         </div>
                                     </div>
                                 </div>
@@ -157,16 +186,17 @@
                         </ul>
                     </div>
                 </section>
+                <!-- inovative -->
                 <section class="inovative-section">
                     <div class="title-area">
                         <h2 class="title" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="500">Inovative</h2>
-                        <p data-aos="fade-up" data-aos-delay="1000">이것저것 만들어본 페이지에요</p>
+                        <p data-aos="fade-up" data-aos-delay="1100">이것저것 만들어본 페이지에요</p>
                     </div>
                     <div class="inovative-wrap">
                         <ul >
                             <li class="inovative-elm-1" data-aos="fade-up" data-aos-delay="1100">
                                 <div class="inovative-img-cont">
-                                    <img src="img/soon.svg" alt="구르미">
+                                    <img src="img/inovative/hard.png" alt="구르미">
                                 </div>
                                 <div class="inovative-hover-cont">
                                     <div class="interactive-hover-area">
@@ -178,7 +208,7 @@
                                         </ul>
                                         <p>html, css, scss, javascript, jquery</p>
                                         <p>기획부터 제작까지 전부 해봤어요</p>
-                                        <p>해당 story에 대해 알고 싶으시면 <a href="#" class="link-story">여기</a></p>
+                                        <p>해당 story에 대해 알고 싶으시면 <a href="#" class="link-story">여기로</a></p>
                                         <div class="btn-wrap">
                                             <a target="_blank" href="http://yeong1110.dothome.co.kr/"class="btn-original">보러가기</a>
                                         </div>
@@ -187,14 +217,14 @@
                             </li>
                             <li class="inovative-elm-2" data-aos="fade-up" data-aos-delay="1200">
                                 <div class="inovative-img-cont">
-                                    <img src="img/soon.svg" alt="168cm">
+                                    <img src="img/inovative/cafe24.png" alt="168cm">
                                 </div>
                                 <div class="inovative-hover-cont">
                                     <div class="interactive-hover-area">
                                         <h4>168cm</h4>
                                         <p>html, css, javascript, jquery</p>
                                         <p>카페24 쇼핑몰 cms 튜닝해봤어요</p>
-                                        <p>해당 story에 대해 알고 싶으시면 <a href="#" class="link-story">여기</a></p>
+                                        <p>해당 story에 대해 알고 싶으시면 <a href="#" class="link-story">여기로</a></p>
                                         <div class="btn-wrap">
                                             <a href="https://yeong1110.cafe24.com/" class="btn-original">보러가기</a>
                                         </div>
@@ -203,16 +233,16 @@
                             </li>
                             <li class="inovative-elm-3" data-aos="fade-up" data-aos-delay="1300">
                                 <div class="inovative-img-cont">
-                                    <img src="img/soon.svg" alt="168cm">
+                                    <img src="img/inovative/react2.png" alt="레오폴드">
                                 </div>
                                 <div class="inovative-hover-cont">
                                     <div class="interactive-hover-area">
-                                        <h4>168cm</h4>
-                                        <p>html, css, javascript, jquery</p>
-                                        <p>카페24 쇼핑몰 cms 튜닝해봤어요</p>
-                                        <p>해당 story에 대해 알고 싶으시면 <a href="#" class="link-story">여기</a></p>
+                                        <h4>Leopold</h4>
+                                        <p>리액트로 만들어봤어요</p>
+                                        <p>usestate,useref,useffect를 사용했어요</p>
+                                        <p>플러그인으로는 bootstrap,swiper,aos를 썼어요</p>
                                         <div class="btn-wrap">
-                                            <a href="https://yeong1110.cafe24.com/" class="btn-original">보러가기</a>
+                                            <a href="https://github.com/yeong1110/react2" class="btn-original">보러가기</a>
                                         </div>
                                     </div>
                                 </div>
@@ -220,32 +250,40 @@
                         </ul>
                     </div>
                 </section>
+                <!-- infinite -->
                 <section class="infinite-section">
                     <div class="title-area">
                         <h2 class="title" data-aos="fade-up" data-aos-delay="1000">infinite</h2>
                         <p data-aos="fade-up" data-aos-delay="1100">페이지를 계속 만들겠다는 확고한 마음이 담겼어요</p>
                     </div>
                     <div class="infinite-swiper swiper we-elm">
-                        <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide" data-aos="fade-up" data-aos-delay="1100">
-                            <a href="#" class="infinite-">
+                            <a href="http://yeong1110.dothome.co.kr/bootstrap/index.html" class="infinite-">
                                 <span class="infinite-img-cont">
-                                    <img src="" alt="">
+                                    <img src="img/infinite/calpis_a2.png" alt="칼피스 리뉴얼">
                                 </span>
-                                <span class="infinite-text">부트스트랩 리뉴얼</span>
+                                <span class="infinite-text">부트스트랩 리뉴얼-calpis</span>
                             </a>
                         </div>
                         <div class="swiper-slide" data-aos="fade-up" data-aos-delay="1200">
-                            <a href="#" class="infinite-">
+                            <a href="http://yeong1110.dothome.co.kr/bootstrap2/index.html" class="infinite-">
                                 <span class="infinite-img-cont">
-                                    <img src="" alt="">
+                                    <img src="img/infinite/hershey_after.png" alt="허쉬 리뉴얼">
                                 </span>
-                                <span class="infinite-text">부트스트랩 리뉴얼</span>
+                                <span class="infinite-text">부트스트랩 리뉴얼-hershey</span>
                             </a>
                         </div>
                         <div class="swiper-slide" data-aos="fade-up" data-aos-delay="1300">
+                            <a href="http://yeong1110.dothome.co.kr/bootstrap3/index.html" class="infinite-">
+                                <span class="infinite-img-cont">
+                                    <img src="img/infinite/mont_after2.png" alt="몽블랑 리뉴얼">
+                                </span>
+                                <span class="infinite-text">부트스트랩 리뉴얼-montblanc</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="1400">
                             <a href="#" class="infinite-">
                                 <span class="infinite-img-cont">
                                     <img src="" alt="">
@@ -262,13 +300,13 @@
                             </a>
                         </div>
                         </div>
-                        <!-- If we need navigation buttons -->
                         <div class="swiper-btn-wrap">
                             <div class="swiper-button-prev infinite-swiper-button-prev"></div>
                             <div class="swiper-button-next infinite-swiper-button-next"></div>
                         </div>
                     </div>
                 </section>
+                <!-- imagine -->
                 <section class="imagine-section">
                     <div class="title-area">
                         <h2 class="title" data-aos="fade-up" data-aos-delay="1000">imagine</h2>
@@ -276,36 +314,50 @@
                     </div>
                     <div class="imagine-wrap swiper">
                         <ul class="swiper-wrapper">
-                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1100">1
+                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1100">
                                 <div class="imagine-img-wrap">
-                                    <img src="" alt="">
+                                    <img src="img/imagine/imagine-1.jpg" alt="쿠마몬">
                                 </div>
                             </li>
-                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1200">2
-                                <img src="" alt="">
+                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1200">
+                                <div class="imagine-img-wrap">
+                                    <img src="img/imagine/imagine-6.jpg" alt="바람과 함께 사라지다">
+                                </div>
                             </li>                
-                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1300">3
-                                <img src="" alt="">
+                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1300">
+                                <div class="imagine-img-wrap">
+                                    <img src="img/imagine/imagine-3.jpg" alt="딸기케이크">
+                                </div>
                             </li>                
-                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1400">4
-                                <img src="" alt="">
+                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1400">
+                                <div class="imagine-img-wrap">
+                                    <img src="img/imagine/imagine-4.jpg" alt="고기">
+                                </div>
                             </li>                
-                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1500">5
-                                <img src="" alt="">
+                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1500">
+                                <div class="imagine-img-wrap">
+                                    <img src="img/imagine/imagine-5.png" alt="크리스마스">
+                                </div>
                             </li>                
-                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1600">6
-                                <img src="" alt="">
+                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1600">
+                                <div class="imagine-img-wrap">
+                                    <img src="img/imagine/imagine-2.jpg" alt="여름">
+                                </div>
                             </li>
-                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1700">7
-                                <img src="" alt="">
+                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1700">
+                                <div class="imagine-img-wrap">
+                                    <img src="img/imagine/imagine-7.jpg" alt="겨울">
+                                </div>
                             </li>
-                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1800">8
-                                <img src="" alt="">
+                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1800">
+                                <div class="imagine-img-wrap">
+                                    <img src="img/imagine/imagine-8.jpg" alt="">
+                                </div>
                             </li>
                         </ul>
-                        <div class="swiper-pagination"></div>
                     </div>
                 </section>
+                <!-- contact -->
                 <article class="contact-wrap" id="contact">
                     <div class="we-animate-cont">
                         <h3>I</h3>
@@ -321,7 +373,7 @@
                         </div>
                     </div>
                     <div class="we-text-cont">
-                        <div class="we-text-area" data-aos="fade-up" data-aos-delay="1500">
+                        <div class="we-text-area" data-aos="fade-up" data-aos-delay="1200">
                             <p class="we-text-1 we-elm">I였던 저는 이제</p>
                             <p class="we-text-1 we-elm" >We가 되어</p>
                             <p class="we-text-1 we-elm" >같이 세상을</p>
