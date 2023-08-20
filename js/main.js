@@ -30,18 +30,18 @@ $(function(){
         },
     });
     
-    setSwiper('.imagine-wrap',{
-      direction: "vertical",
-      // autoHeight: true,
-      // allowTouchMove: false,
-      // slidesPerColumn: 3,
-      slidesPerView: "auto",
-      grid: {
-        rows: 2,
-      },
-      // slidesPerView: 3,
-      // spaceBetween: 10,
-    })
+    // setSwiper('.imagine-wrap',{
+    //   direction: "vertical",
+    //   // autoHeight: true,
+    //   // allowTouchMove: false,
+    //   // slidesPerColumn: 3,
+    //   slidesPerView: "auto",
+    //   grid: {
+    //     rows: 2,
+    //   },
+    //   // slidesPerView: 3,
+    //   // spaceBetween: 10,
+    // })
 
     let tl = gsap.timeline({
       // yes, we can add it to an entire timeline!
