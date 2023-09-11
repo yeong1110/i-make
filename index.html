@@ -6,17 +6,15 @@
     <meta name="author" content="yoengeun" />
     <meta
     property="description"
-    content="I가 만드는 세상에 오신 것을 환영합니다.
-    I가 여태까지 쌓아온 스킬들과 웹 서비스들을 둘러보세요.
-    이상 웹 퍼블리셔를 꿈꾸는 I의 설명이었습니다." />
+    content="웹 퍼블리셔를 꿈꾸는 I가 만드는 세상에 오신 것을 환영합니다.
+    I가 여태까지 쌓아온 스킬들과 웹 서비스들을 둘러보세요." />
     <meta
     property="og:image"
     content="img/I-logo.svg" />
     <meta 
     property="og:description"
-    content="I가 만드는 세상에 오신 것을 환영합니다.
-    I가 여태까지 쌓아온 스킬들과 웹 서비스들을 둘러보세요.
-    이상 웹 퍼블리셔를 꿈꾸는 I의 설명이었습니다."
+    content="웹 퍼블리셔를 꿈꾸는 I가 만드는 세상에 오신 것을 환영합니다.
+    I가 여태까지 쌓아온 스킬들과 웹 서비스들을 둘러보세요."
     />
     <meta property="og:title" content="how I make my world" />
     <meta name="twitter:title" content="how I make my world" />
@@ -59,10 +57,10 @@
                             <img src="img/I-logo.svg" alt="로고">
                         </a>
                     </h1>
-                    <ul>
-                        <li><a href="#i-am">I am</a></li>
-                        <li><a href="#interactive">My work</a></li>
-                        <li><a href="#contact">contact</a></li>
+                    <ul class="navi-area">
+                        <li><a href="#i-am" data-href="#i-am">I am</a></li>
+                        <li><a href="#interactive" data-href="#interactive">My work</a></li>
+                        <li><a href="#contact" data-href="#contact">contact</a></li>
                     </ul>
                 </nav>
             </header>
@@ -84,9 +82,9 @@
                         <img src="img/photo.png" alt="3d 캐릭터"></div>
                     <section class="i-am-text-1" >
                         <h2>UI & UX Publisher</h2>
-                        <p data-aos="fade-up">나는 유저와 상호작용하는 것을 좋아해요</p>
-                        <p data-aos="fade-up">나는 혁신적인 웹을 만드는 것을 좋아해요</p>
-                        <p data-aos="fade-up">나는 끝없이 배움을 추구하는 사람이에요</p>
+                        <p data-aos="fade-up">저는 유저와 상호작용하는 것을 좋아합니다.</p>
+                        <p data-aos="fade-up">저는 혁신적인 웹을 만드는 것을 목표로 합니다.</p>
+                        <p data-aos="fade-up">저는 끝없이 배움을 추구합니다!</p>
                     </section>
                     <section class="i-am-text-2">
                         <h4>Do you want more?</h4>
@@ -94,35 +92,37 @@
                     </section>
                 </article>
                 <article class="i-can-wrap">
-                    <h2>I can…</h2>
-                    <section class="i-can-text-cont">
-                        <ul data-aos="fade-up" data-aos-delay="700" data-aos-duration="500">
-                            <li>
-                                <h3>HTML5</h3>
-                                <p>웹표준& 웹접근성에 맞춰 작업할 수 있어요</p>
-                            </li>
-                            <li>
-                                <h3>CSS3</h3>
-                                <p>반응형 작업을 할 수 있어요</p>
-                            </li>
-                            <li>
-                                <h3>SCSS</h3>
-                                <p>변수와 @import @mixin을 사용할 수 있어요</p>
-                            </li>
-                            <li>
-                                <h3>javascript</h3>
-                                <p>변수와 배열에 관한 기초지식을 알고 있어요</p>
-                            </li>
-                            <li>
-                                <h3>Jquery</h3>
-                                <p>인터렉션 이벤트들을 달 수 있어요</p>
-                            </li>
-                            <li>
-                                <h3>React</h3>
-                                <p>컴포넌트를 만들고 사용할 수 있어요</p>
-                            </li>
-                        </ul>
-                    </section>
+                    <div class="i-can-cont">
+                        <h2>I can…</h2>
+                        <section class="i-can-text-cont">
+                            <ul data-aos="fade-up" data-aos-delay="700" data-aos-duration="500">
+                                <li>
+                                    <h3>HTML5</h3>
+                                    <p>웹표준& 웹접근성에 맞춰 작업할 수 있어요</p>
+                                </li>
+                                <li>
+                                    <h3>CSS3</h3>
+                                    <p>반응형 작업을 할 수 있어요</p>
+                                </li>
+                                <li>
+                                    <h3>SCSS</h3>
+                                    <p>변수와 @import @mixin을 사용할 수 있어요</p>
+                                </li>
+                                <li>
+                                    <h3>javascript</h3>
+                                    <p>변수와 배열에 관한 기초지식을 알고 있어요</p>
+                                </li>
+                                <li>
+                                    <h3>Jquery</h3>
+                                    <p>인터렉션 이벤트들을 달 수 있어요</p>
+                                </li>
+                                <li>
+                                    <h3>React</h3>
+                                    <p>컴포넌트를 만들고 사용할 수 있어요</p>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
                 </article>
                 <!-- interactiive -->
                 <section class="interactive-section" id="interactive">
@@ -144,7 +144,7 @@
                                             <p>맡은 분야: 디자인, 퍼블리싱</p>
                                             <p>협업 툴: notion, github</p>
                                             <div class="btn-wrap">
-                                                <a href="https://wordbook.kro.kr/" class="btn-original">보러가기</a>
+                                                <a href="https://www.wordbook.kro.kr/" class="btn-original">보러가기</a>
                                             </div>
                                         </div>
                                     </div>
@@ -316,12 +316,12 @@
                         <ul class="imagine-cont">
                             <li class=" " data-aos="fade-up" data-aos-delay="710">
                                 <div class="imagine-img-wrap">
-                                    <img src="img/imagine/imagine-1.jpg" alt="쿠마몬">
+                                    <img src="img/imagine/plant.png" alt="plant">
                                 </div>
                             </li>
                             <li class=" " data-aos="fade-up" data-aos-delay="720">
                                 <div class="imagine-img-wrap">
-                                    <img src="img/imagine/imagine-6.jpg" alt="바람과 함께 사라지다">
+                                    <img src="img/imagine/2023-08-20.png" alt="flower">
                                 </div>
                             </li>                
                             <li class=" " data-aos="fade-up" data-aos-delay="730">
@@ -331,27 +331,27 @@
                             </li>                
                             <li class=" " data-aos="fade-up" data-aos-delay="740">
                                 <div class="imagine-img-wrap">
-                                    <img src="img/imagine/imagine-4.jpg" alt="고기">
+                                    <img src="img/imagine/flower.png" alt="flower2">
                                 </div>
                             </li>                
-                            <li class=" " data-aos="fade-up" data-aos-delay="750">
+                            <li class=" " data-aos="fade-up" data-aos-delay="740">
                                 <div class="imagine-img-wrap">
-                                    <img src="img/imagine/imagine-5.png" alt="크리스마스">
+                                    <img src="img/soon.svg" alt="soon">
                                 </div>
                             </li>                
                             <li class=" " data-aos="fade-up" data-aos-delay="760">
                                 <div class="imagine-img-wrap">
-                                    <img src="img/imagine/imagine-2.jpg" alt="여름">
+                                    <img src="img/soon.svg" alt="soon">
                                 </div>
                             </li>
                             <li class=" " data-aos="fade-up" data-aos-delay="770">
                                 <div class="imagine-img-wrap">
-                                    <img src="img/imagine/imagine-7.jpg" alt="겨울">
+                                    <img src="img/soon.svg" alt="soon">
                                 </div>
                             </li>
                             <li class=" " data-aos="fade-up" data-aos-delay="780">
                                 <div class="imagine-img-wrap">
-                                    <img src="img/imagine/imagine-8.jpg" alt="">
+                                    <img src="img/soon.svg" alt="soon">
                                 </div>
                             </li>
                         </ul>
@@ -360,16 +360,18 @@
                 <!-- contact -->
                 <article class="contact-wrap" id="contact">
                     <div class="we-animate-cont">
-                        <h3>I</h3>
-                        <div class="we-animate-1">
-                            <p class="i-2">I</p>
-                            <p class="i-1">I</p>
-                            <p class="i-3">I</p>
-                            <p class="i-4">I</p>
-                            <span class="i-5">e</span>
-                        </div>
-                        <div class="we-animate-2">
-                            <h4>WE</h4>
+                        <div class="we-animate-area">
+                            <h3>I</h3>
+                            <div class="we-animate-1">
+                                <p class="i-2">I</p>
+                                <p class="i-1">I</p>
+                                <p class="i-3">I</p>
+                                <p class="i-4">I</p>
+                                <span class="i-5">e</span>
+                            </div>
+                            <div class="we-animate-2">
+                                <h4>WE</h4>
+                            </div>
                         </div>
                     </div>
                     <div class="we-text-cont">
@@ -384,19 +386,26 @@
                 <article class="email-wrap">
                     <div class="email-cont">
                         <h3 data-aos="fade-up" data-aos-delay="600">언제든지 연락주세요</h3>
-                        <p data-aos="fade-up" data-aos-delay="610">a0257942@gmail.com</p>
+                        <p data-aos="fade-up" data-aos-delay="610"><address id="myAddress" title="email 복사하기">a0257942@gmail.com</address></p>
                     </div>
                     <div class="thank-cont">
                         <p>감사합니다</p>
                     </div>
                 </article>
-
             </div>
             <footer>
                 <p>copyright by 2023 yeongeun</p>
             </footer>
         </div>
         </div>
+        <aside id="alert">
+            <div>
+                <p>성공적으로 복사되었습니다!</p>
+            </div>
+        </aside>
+        <aside class="top-area">
+            <a href="#" id="go-top" title="back to top"><img src="img/up2.svg" alt=""></a>
+        </aside>
         <script src="js/main.js"></script>
 </body>
 </html>

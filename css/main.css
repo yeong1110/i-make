@@ -22,7 +22,7 @@ body {
 }
 
 a {
-  color: #000;
+  color: #202020;
 }
 
 img {
@@ -46,6 +46,7 @@ h2 {
 }
 
 .btn-original {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,13 +54,29 @@ h2 {
   height: 32px;
   background: #D9D9D9;
   border-radius: 8px;
-  transition: box-shadow 0.36s ease;
+  z-index: 1;
+  transition: color 0.26s linear;
 }
-.btn-original:hover {
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+.btn-original::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: #E4EDC1;
+  transition: -webkit-clip-path 0.1s linear;
+  transition: clip-path 0.1s linear;
+  transition: clip-path 0.1s linear, -webkit-clip-path 0.1s linear;
+  -webkit-clip-path: inset(5% 50% 15% 50%);
+          clip-path: inset(5% 50% 15% 50%);
+  z-index: -1;
 }
-.btn-original:focus-within {
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+.btn-original:focus::after, .btn-original:hover::after {
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
 }
 
 .btn-square {
@@ -167,6 +184,7 @@ header nav ul li {
   font-weight: 400;
 }
 .i-am-wrap .i-am-text-2 a {
+  background: #E4EDC1;
   position: relative;
   font-weight: 600;
 }
@@ -474,10 +492,17 @@ header nav ul li {
 }
 
 .contact-wrap {
+  position: relative;
   margin-top: 59px;
 }
 
+.we-animate-area {
+  position: absolute;
+}
+
 .we-animate-cont {
+  position: relative;
+  height: 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -496,6 +521,7 @@ header nav ul li {
 }
 .we-text-cont .we-text-area {
   font-size: 24px;
+  text-align: center;
 }
 
 .email-wrap {
@@ -511,7 +537,43 @@ header nav ul li {
 .email-wrap .email-cont p {
   font-weight: 600;
 }
+.email-wrap .email-cont p address {
+  cursor: pointer;
+}
 
+#alert {
+  position: fixed;
+  width: 100%;
+  bottom: 10%;
+  left: 0;
+}
+#alert > div {
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px;
+  margin: 0 auto;
+  background: #E4EDC1;
+  border-radius: 20px;
+}
+#alert.active > div {
+  animation: fadeUp 2.6s ease-in-out forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-20%);
+  }
+}
 .thank-cont {
   position: relative;
 }
@@ -534,6 +596,25 @@ footer {
   text-align: center;
 }
 
+.top-area {
+  position: fixed;
+  display: flex;
+  width: 48px;
+  height: 48px;
+  bottom: 48px;
+  right: 48px;
+}
+.top-area #go-top {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+.top-area #go-top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (min-width: 768px) {
   .wrap {
     width: 60%;
@@ -553,10 +634,14 @@ footer {
     font-size: 18px;
   }
   .wrap {
-    width: 1280px;
+    width: 100%;
+  }
+  .cont {
+    width: 100%;
   }
   section {
-    margin-bottom: 200px;
+    width: 1280px;
+    margin: 0 auto 200px;
   }
   .btn-original {
     padding: 3px 5px;
@@ -568,8 +653,15 @@ footer {
     background: #fff;
     z-index: 100;
   }
+  header nav {
+    width: 80%;
+    margin: 0 auto;
+  }
   .intro-wrap h2 {
     margin-top: 200px;
+  }
+  .intro-wrap .intro-cont {
+    width: 80%;
   }
   .intro-after-wrap {
     margin-top: 500px;
@@ -585,20 +677,26 @@ footer {
     height: 100%;
     margin-bottom: 200px;
     padding: 30px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    border-radius: 0;
   }
   .i-can-wrap ul {
+    padding: 50px 30px;
     box-shadow: none;
   }
   .i-can-wrap h2 {
     font-size: 38px;
     margin-bottom: 30px;
   }
+  .i-can-cont {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
   .i-can-text-cont {
-    margin-bottom: 0;
-    width: 50%;
+    margin: 0;
+    width: 40%;
   }
   .i-can-text-cont h3 {
     font-size: 20px;
@@ -625,7 +723,7 @@ footer {
     justify-content: center;
   }
   .interactive-wrap {
-    width: 60%;
+    width: 50%;
   }
   .interactive-wrap ul li {
     height: 350px;
@@ -668,13 +766,12 @@ footer {
   }
   .imagine-wrap {
     height: 600px;
-    overflow: auto;
   }
   .imagine-wrap ul {
     grid-template-columns: repeat(4, 1fr);
   }
   .imagine-wrap ul li {
-    width: 280px;
+    width: 100%;
     height: 280px;
     margin: 0;
   }
@@ -696,5 +793,8 @@ footer {
   }
   .thank-cont p::before {
     font-size: 96px;
+  }
+  .top-area #go-top {
+    display: block;
   }
 }/*# sourceMappingURL=main.css.map */

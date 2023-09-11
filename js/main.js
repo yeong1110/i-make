@@ -3,7 +3,7 @@ AOS.init();
 
 gsap.set('.intro-cont span',{opacity:0})
 gsap.set('.we-animate-cont h3',{opacity:0, y: -50})
-gsap.set('.we-animate-1 p',{x: 100, y:50})
+// gsap.set('.we-animate-1 p',{x: 100, y:50})
 gsap.set('.we-animate-2 h4',{opacity: 0})
 gsap.set('.intro-after-wrap',{opacity: 0})
 gsap.set(".we-elm", { y: 100, opacity: 0 })
@@ -11,6 +11,67 @@ gsap.set(".we-elm", { y: 100, opacity: 0 })
 var delay = 0;
 var dur = 1.5;
 var tp = "150%";
+const address = document.getElementById('myAddress');
+const myAlert = document.querySelector('#alert');
+const btt = document.querySelector('#go-top');
+
+//클립보드
+  function copy(e){
+    e.preventDefault();
+    const content = 'a027942@gmail.com';
+    navigator.clipboard.writeText(content);
+    }
+
+function timer(){
+  setTimeout(function(){
+    myAlert.classList.remove('active');
+  },2600)
+}
+
+  address.addEventListener('click',function(e) {
+    copy(e);
+
+    // myAlert = 
+    // `
+    // <div>
+    //     <p>성공적으로 복사되었습니다!</p>
+    // </div>
+    // `
+    // document.getElementById('alert').innerHTML = myAlert;
+    myAlert.classList.add('active');
+    timer();
+    
+  });
+
+  
+  document.addEventListener('DOMContentLoaded',function(){
+      window.addEventListener('scroll',function(){
+          let scrollAmount = window.scrollY;
+          if(scrollAmount > 600){
+              btt.className = 'active'
+          }else{
+              btt.classList.remove('active');
+          }
+      })
+  })
+  btt.addEventListener('click', function(e){
+      e.preventDefault();
+      window.scrollTo({
+          top:0,
+          left:0,
+          behavior:'smooth'
+      });
+  })
+  document.querySelector('.navi-area').addEventListener('click',function(e){
+    console.log('ok');
+    e.preventDefault();
+    var anchor = e.target.getAttribute('href');
+    console.log(anchor)
+    window.scrollTo({
+      top: anchor.offsetTop
+    })
+    console.log(anchor.offsetTop)
+  })
 
 $(function(){
     setSwiper('.infinite-swiper', {
@@ -30,32 +91,18 @@ $(function(){
         },
     });
     
-    // setSwiper('.imagine-wrap',{
-    //   direction: "vertical",
-    //   // autoHeight: true,
-    //   // allowTouchMove: false,
-    //   // slidesPerColumn: 3,
-    //   slidesPerView: "auto",
-    //   grid: {
-    //     rows: 2,
-    //   },
-    //   // slidesPerView: 3,
-    //   // spaceBetween: 10,
-    // })
-
     let tl = gsap.timeline({
-      // yes, we can add it to an entire timeline!
       scrollTrigger: {
         trigger: ".intro-wrap",
-        pin: true,   // pin the trigger element while active
-        start: "top top", // when the top of the trigger hits the top of the viewport
-        end: "+=800", // end after scrolling 500px beyond the start
-        scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        pin: true,   
+        start: "top top", 
+        end: "+=800", 
+        scrub: 1, 
         snap: {
-          snapTo: "labels", // snap to the closest label in the timeline
-          duration: 1, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-          delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-          ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
+          snapTo: "labels", 
+          duration: 1, 
+          delay: 0.2, 
+          ease: "power1.inOut" 
         },
         
         // markers: true
@@ -105,7 +152,6 @@ $(function(){
     .to('.i-4', {rotation: 23.129, x: 0, y:0, scale: 1.2})
     .addLabel('end')
     .to('.i-1', {rotation: 18})
-    .to('.we-animate-1',{x: -30})
     .from('.i-5', {autoAlpha: 0,x: 0, y: 0})
     .to('.i-5', {x: 0, y: 0})
     .to('.we-animate-1', {opacity: 0, display: 'none'})
