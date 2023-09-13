@@ -363,7 +363,7 @@ header{
         justify-items: center;
         gap: 10px;
         li{
-            width: 100px;
+            min-width: 100%;
             height: 100px;
             background: $main-color;
             margin: 0 0.8771929824561403%;
@@ -456,6 +456,7 @@ header{
 }
 
 #alert{
+    display: none;
     position: fixed;
     width: 100%;
     bottom: 10%;
@@ -543,6 +544,16 @@ footer{
     }
     .i-am-wrap h2, .title{
         font-size: $fsiz-little-big;
+    }
+    .imagine-wrap{
+        ul{
+            li{
+                height: 150px;
+            }
+        }
+    }
+    #alert{
+        display: block;
     }
 }
 

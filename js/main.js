@@ -54,24 +54,24 @@ function timer(){
           }
       })
   })
-  btt.addEventListener('click', function(e){
-      e.preventDefault();
-      window.scrollTo({
-          top:0,
-          left:0,
-          behavior:'smooth'
-      });
-  })
-  document.querySelector('.navi-area').addEventListener('click',function(e){
-    console.log('ok');
-    e.preventDefault();
-    var anchor = e.target.getAttribute('href');
-    console.log(anchor)
-    window.scrollTo({
-      top: anchor.offsetTop
-    })
-    console.log(anchor.offsetTop)
-  })
+  // btt.addEventListener('click', function(e){
+  //     e.preventDefault();
+  //     window.scrollTo({
+  //         top:0,
+  //         left:0,
+  //         behavior:'smooth'
+  //     });
+  // })
+  // document.querySelector('.navi-area').addEventListener('click',function(e){
+  //   console.log('ok');
+  //   e.preventDefault();
+  //   var anchor = e.target.getAttribute('href');
+  //   console.log(anchor)
+  //   window.scrollTo({
+  //     top: anchor.offsetTop
+  //   })
+  //   console.log(anchor.offsetTop)
+  // })
 
 $(function(){
     setSwiper('.infinite-swiper', {
