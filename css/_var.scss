@@ -44,6 +44,15 @@ img{
     height: $p100;
 }
 
+picture{
+    display: flex;
+    object-fit: contain;
+}
+
+.infinite-img-cont picture{
+    display: contents;
+}
+
 h2{
     font-size: 24px;
 }

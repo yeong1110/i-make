@@ -79,7 +79,13 @@
                 <article class="i-am-wrap" id="i-am">
                     <h2>I am…</h2>
                     <div class="i-am-photo-cont">
-                        <img src="img/photo.png" alt="3d 캐릭터"></div>
+                        <picture>
+                            <source srcset="img/photo-480.png"  />
+                            <source srcset="img/photo-480.avif" type="image/avif" />
+                            <source srcset="img/photo-480.webp" type="image/webp" />
+                            <img src="img/photo-480.png" alt="내 이미지">
+                        </picture>
+                    </div>
                     <section class="i-am-text-1" >
                         <h2>UI & UX Publisher</h2>
                         <p data-aos="fade-up">저는 유저와 상호작용하는 것을 좋아합니다.</p>
@@ -152,7 +158,16 @@
                             </li>
                             <li class="we-elm">
                                 <div class="interactive-img-cont">
-                                    <img src="img/interactive/inter-2.png" alt="수강신청">
+                                    <picture>
+                                        <source media="(max-width: 799px)" srcset="img/interactive/inter-2-480.avif" type="image/avif">
+                                        <source media="(max-width: 799px)" srcset="img/interactive/inter-2-480.webp" type="image/webp">
+                                        <source media="(max-width: 799px)" srcset="img/interactive/inter-2-480.png">
+
+                                        <source media="(min-width: 800px)" srcset="img/interactive/inter-2.avif" type="image/avif" />
+                                        <source media="(min-width: 800px)" srcset="img/interactive/inter-2.webp" type="image/webp" />
+                                        <source media="(min-width: 800px)" srcset="img/interactive/inter-2.png"  />
+                                        <img src="img/interactive/inter-2.png" alt="수강신청">
+                                    </picture>
                                 </div>
                                 <div class="interactive-text-cont">
                                     <p>성결대 수강신청 페이지</p>
@@ -196,7 +211,14 @@
                         <ul >
                             <li class="inovative-elm-1" data-aos="fade-up" data-aos-delay="710">
                                 <div class="inovative-img-cont">
-                                    <img src="img/inovative/hard.png" alt="구르미">
+                                    <picture>
+                                        <source media="(max-width: 799px)" srcset="img/inovative/hard-480.webp" type="image/webp">
+                                        <source media="(max-width: 799px)" srcset="img/inovative/hard-480.png">
+
+                                        <source media="(min-width: 800px)" srcset="img/inovative/hard.webp" type="image/webp" />
+                                        <source media="(min-width: 800px)" srcset="img/inovative/hard.png"/>
+                                        <img src="img/inovative/hard.png" alt="구르미">
+                                    </picture>
                                 </div>
                                 <div class="inovative-hover-cont">
                                     <div class="interactive-hover-area">
@@ -217,7 +239,14 @@
                             </li>
                             <li class="inovative-elm-2" data-aos="fade-up" data-aos-delay="720">
                                 <div class="inovative-img-cont">
-                                    <img src="img/inovative/cafe24.png" alt="168cm">
+                                    <picture>
+                                        <source media="(max-width: 799px)" srcset="img/inovative/cafe24-480.webp" type="image/webp">
+                                        <source media="(max-width: 799px)" srcset="img/inovative/cafe24-480.png">
+
+                                        <source media="(min-width: 800px)" srcset="img/inovative/cafe24.webp" type="image/webp" />
+                                        <source media="(min-width: 800px)" srcset="img/inovative/cafe24.png"/>
+                                        <img src="img/inovative/cafe24.png" alt="168cm">
+                                    </picture>
                                 </div>
                                 <div class="inovative-hover-cont">
                                     <div class="interactive-hover-area">
@@ -233,7 +262,14 @@
                             </li>
                             <li class="inovative-elm-3" data-aos="fade-up" data-aos-delay="730">
                                 <div class="inovative-img-cont">
-                                    <img src="img/inovative/react2.png" alt="레오폴드">
+                                    <picture>
+                                        <source media="(max-width: 799px)" srcset="img/inovative/react2-480.webp" type="image/webp">
+                                        <source media="(max-width: 799px)" srcset="img/inovative/react2-480.png">
+
+                                        <source media="(min-width: 800px)" srcset="img/inovative/react2.webp" type="image/webp" />
+                                        <source media="(min-width: 800px)" srcset="img/inovative/react2.png"/>
+                                        <img src="img/inovative/react2.png" alt="레오폴드">
+                                    </picture>
                                 </div>
                                 <div class="inovative-hover-cont">
                                     <div class="interactive-hover-area">
@@ -262,7 +298,14 @@
                         <div class="swiper-slide" data-aos="fade-up" data-aos-delay="710">
                             <a href="http://yeong1110.dothome.co.kr/bootstrap/index.html" class="infinite-">
                                 <span class="infinite-img-cont">
-                                    <img src="img/infinite/calpis_a2.png" alt="칼피스 리뉴얼">
+                                    <picture>
+                                        <source media="(max-width: 799px)" srcset="img/infinite/calpis_a2-480.webp" type="image/webp">
+                                        <source media="(max-width: 799px)" srcset="img/infinite/calpis_a2-480.png">
+
+                                        <source media="(min-width: 800px)" srcset="img/infinite/calpis_a2.webp" type="image/webp" />
+                                        <source media="(min-width: 800px)" srcset="img/infinite/calpis_a2.png"/>
+                                        <img src="img/infinite/calpis_a2.png" alt="칼피스 리뉴얼">
+                                    </picture>
                                 </span>
                                 <span class="infinite-text">부트스트랩 리뉴얼-calpis</span>
                             </a>
