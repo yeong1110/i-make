@@ -15,7 +15,6 @@ html {
   height: 100%;
   font-size: 14px;
   font-family: "Pretendard-Regular", "noto-Sans";
-  scroll-behavior: smooth !important;
 }
 
 body {
@@ -782,9 +781,6 @@ footer {
   .infinite-section .swiper .swiper-wrapper .swiper-slide a .infinite-img-cont {
     height: 300px;
   }
-  .imagine-wrap {
-    height: 600px;
-  }
   .imagine-wrap ul {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -803,7 +799,7 @@ footer {
     font-size: 38px;
   }
   .email-wrap {
-    margin: 200px 0;
+    margin: 120px 0 200px;
     font-size: 20px;
   }
   .thank-cont {

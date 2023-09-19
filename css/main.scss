@@ -724,7 +724,7 @@ footer{
         }
     }
     .imagine-wrap{
-        height: 600px;
+        // height: 600px;
         ul{
             grid-template-columns: repeat(4, 1fr);
             li{
@@ -746,7 +746,7 @@ footer{
         }
     }
     .email-wrap{
-        margin: 200px 0;
+        margin: 120px 0 200px;
         font-size: $fsiz-nomal;
     }
     .thank-cont{
