@@ -72,6 +72,41 @@ function timer(){
   //   })
   //   console.log(anchor.offsetTop)
   // })
+  // 갤러리
+    const img2 = document.querySelector('.imagine-cont');
+    const img1 = document.querySelectorAll('.imagine-cont li img');
+    lightbox = document.querySelector('.lightbox-overlay');
+    lightboxImg = document.querySelector('#lightbox-image');
+
+    function imgClick(e){
+        img2.addEventListener('click',function(e){
+            if(e.target.nodeName == 'UL'){
+              console.log(1)
+              return;
+            }
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            let target= e.target.getAttribute('src');
+
+            lightboxImg.setAttribute('src',target);
+            lightbox.classList.add('visible');
+            document.body.classList.add('hidden')
+            document.addEventListener('scroll',function(e){
+              console.log(1)
+              e.preventDefault();
+            })
+
+          })
+    }
+
+
+    
+    imgClick();
+    lightbox.addEventListener('click',function(){
+        lightbox.classList.remove('visible');
+        document.body.classList.remove('hidden');
+    })
+
 
 $(function(){
     setSwiper('.infinite-swiper', {
