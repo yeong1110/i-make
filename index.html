@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="yoengeun" />
     <meta
-    property="description"
+    name="description"
     content="웹 퍼블리셔를 꿈꾸는 I가 만드는 세상에 오신 것을 환영합니다.
     I가 여태까지 쌓아온 스킬들과 웹 서비스들을 둘러보세요." />
     <meta
@@ -80,8 +80,6 @@
                     <h2>I am…</h2>
                     <div class="i-am-photo-cont">
                         <picture>
-                            <source srcset="img/photo-480.png"  />
-                            <source srcset="img/photo-480.avif" type="image/avif" />
                             <source srcset="img/photo-480.webp" type="image/webp" />
                             <img src="img/photo-480.png" alt="내 이미지">
                         </picture>
@@ -312,7 +310,13 @@
                         <div class="swiper-slide" data-aos="fade-up" data-aos-delay="720">
                             <a target="_blank" href="http://yeong1110.dothome.co.kr/bootstrap2/index.html" class="infinite-">
                                 <span class="infinite-img-cont">
-                                    <img src="img/infinite/hershey_after.png" alt="허쉬 리뉴얼">
+                                    <picture>
+                                        <source media="(max-width: 799px)" srcset="img/infinite/hershey_after-480.webp" type="image/webp">
+                                        <source media="(max-width: 799px)" srcset="img/infinite/hershey_after-480.png">
+
+                                        <source media="(min-width: 800px)" srcset="img/infinite/hershey_after.webp"/>
+                                        <img src="img/infinite/hershey_after.png" alt="허쉬 리뉴얼">
+                                    </picture>
                                 </span>
                                 <span class="infinite-text">부트스트랩 리뉴얼-hershey</span>
                             </a>
@@ -320,7 +324,13 @@
                         <div class="swiper-slide" data-aos="fade-up" data-aos-delay="730">
                             <a target="_blank" href="http://yeong1110.dothome.co.kr/bootstrap3/index.html" class="infinite-">
                                 <span class="infinite-img-cont">
-                                    <img src="img/infinite/mont_after2.png" alt="몽블랑 리뉴얼">
+                                    <picture>
+                                        <source media="(max-width: 799px)" srcset="img/infinite/mont_after2-480.webp" type="image/webp">
+                                        <source media="(max-width: 799px)" srcset="img/infinite/mont_after2-480.png">
+
+                                        <source media="(min-width: 800px)" srcset="img/infinite/mont_after2.webp"/>
+                                        <img src="img/imagine/plant.png" alt="몽블랑 리뉴얼">
+                                    </picture>
                                 </span>
                                 <span class="infinite-text">부트스트랩 리뉴얼-montblanc</span>
                             </a>
@@ -358,12 +368,26 @@
                         <ul class="imagine-cont">
                             <li class=" " data-aos="fade-up" data-aos-delay="710">
                                 <div class="imagine-img-wrap">
-                                    <img src="img/imagine/plant.png" alt="plant">
+                                    <picture>
+                                        <source media="(max-width: 799px)" srcset="img/imagine/plant.webp" type="image/webp">
+                                        <source media="(max-width: 799px)" srcset="img/imagine/plant-480.png">
+
+                                        <source media="(min-width: 800px)" srcset="img/imagine/plant.avif" type="image/avif" />
+                                        <source media="(min-width: 800px)" srcset="img/imagine/plant.png"/>
+                                        <img src="img/imagine/plant.webp" alt="plant">
+                                    </picture>
                                 </div>
                             </li>
                             <li class=" " data-aos="fade-up" data-aos-delay="720">
                                 <div class="imagine-img-wrap">
-                                    <img src="img/imagine/2023-08-20.png" alt="flower">
+                                    <picture>
+                                        <source media="(max-width: 799px)" srcset="img/imagine/2023-08-20-480.webp" type="image/webp">
+                                        <source media="(max-width: 799px)" srcset="img/imagine/2023-08-20-480.png">
+
+                                        <source media="(min-width: 800px)" srcset="img/imagine/2023-08-20.avif" type="image/avif" />
+                                        <source media="(min-width: 800px)" srcset="img/imagine/2023-08-20.png"/>
+                                        <img src="img/imagine/2023-08-20.webp" alt="flower">
+                                    </picture>
                                 </div>
                             </li>                
                             <li class=" " data-aos="fade-up" data-aos-delay="730">
@@ -373,7 +397,15 @@
                             </li>                
                             <li class=" " data-aos="fade-up" data-aos-delay="740">
                                 <div class="imagine-img-wrap">
-                                    <img src="img/imagine/flower.png" alt="flower2">
+                                    <picture>
+                                        <source media="(max-width: 799px)" srcset="img/imagine/flower.webp" type="image/webp">
+                                        <source media="(max-width: 799px)" srcset="img/imagine/flower.png">
+
+                                        <source media="(min-width: 800px)" srcset="img/imagine/flower.avif" type="image/avif" />
+                                        <source media="(min-width: 800px)" srcset="img/imagine/flower.png"/>
+                                        <img src="img/imagine/flower.webp" alt="flower2">
+                                    </picture>
+                                    <img src="img/imagine/flower.webp" alt="flower2">
                                 </div>
                             <!-- </li>                
                             <li class=" " data-aos="fade-up" data-aos-delay="740">
