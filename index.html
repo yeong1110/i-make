@@ -29,18 +29,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
-    <link
-    rel="stylesheet"
+    <link 
+    rel="preload"
     href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    onload="this.onload=null;this.rel='stylesheet'"
+    rel="stylesheet"
+    as="style"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"></noscript>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
     <link rel="stylesheet" href="css/main.css">
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript">
         document.oncontextmenu = function(){return false;};
     </script>
@@ -483,6 +484,11 @@
         <aside class="top-area">
             <a href="#top" id="go-top" title="back to top"><img src="img/up2.svg" alt=""></a>
         </aside>
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script async src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <script src="js/main.js"></script>
 </body>
 </html>
