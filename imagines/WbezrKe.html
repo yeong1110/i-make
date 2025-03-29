@@ -1,0 +1,39 @@
+<style>
+  img {
+    display: flex;
+    height: 100%;
+		width: 100%;
+  }
+
+  .circle {
+    animation: 2s infinite alternate circle;
+  }
+
+  @keyframes circle {
+    from {
+      -webkit-clip-path: circle(0%);
+      clip-path: circle(0%);
+    }
+    to {
+      -webkit-clip-path: circle(150px);
+      clip-path: circle(150px);
+    }
+  }
+
+  .wrap {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+  }
+</style>
+<div class="wrap">
+	<div class="img-wrapper">
+		<img
+			src="https://cdn.pixabay.com/photo/2022/03/24/14/42/animal-7089224_1280.jpg"
+			class="circle"
+		/>
+	</div>
+</div>

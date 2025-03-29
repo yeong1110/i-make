@@ -1,0 +1,41 @@
+<style>
+  .wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+  }
+
+  svg {
+    transform-origin: center;
+    animation: spinText 15s linear infinite;
+  }
+
+  @keyframes spinText {
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+</style>
+<div class="wrap">
+  <svg width="250" height="250" viewBox="0 0 250 250">
+    <g transform="translate(130.4840683935832 108.06198272813216)">
+      <path
+        id="curve"
+        d="M51.6 -41.5C72.1 -31.1 97.6 -15.6 100.7 3.2C103.9 21.9 84.8 43.8 64.3 63.7C43.8 83.5 21.9 101.3 -3.7 104.9C-29.2 108.6 -58.5 98.1 -79.3 78.3C-100.1 58.5 -112.6 29.2 -112 0.6C-111.4 -28 -97.8 -56.1 -76.9 -66.5C-56.1 -76.9 -28 -69.7 -6.2 -63.5C15.6 -57.2 31.1 -51.9 51.6 -41.5"
+        fill="transparent"
+      />
+      <text fill="url(#grad1)">
+        <textPath href="#curve">
+          나만의 단어장 보카박스 나만의 단어장 보카박스 나만의 단어장 보카박스
+          나만의 단어
+        </textPath>
+      </text>
+      <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+        <stop offset="0%" stop-color="#00CC99" />
+        <stop offset="100%" stop-color="#6600FF" />
+      </linearGradient>
+    </g>
+  </svg>
+</div>

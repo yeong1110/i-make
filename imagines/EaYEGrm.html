@@ -1,0 +1,71 @@
+<style>
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.5vw, 2rem, 2vw);
+    padding-bottom: 150px;
+  }
+
+  .scroll-item {
+    width: clamp(80%, 50%, 500px);
+    height: 200px;
+    background-color: slateblue;
+    border-radius: 10px;
+  }
+
+  @supports (animation-timeline: view()) {
+    .scroll-item {
+      animation: appear 0.5s linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 50%;
+    }
+  }
+
+  @supports not (animation-timeline: view()) {
+    h1::after {
+      content: "스크롤 애니메이션을 지원하지 않음!";
+      display: block;
+      margin-top: clamp(1.5vw, 2rem, 2vw);
+    }
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0.2;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+<div class="wrap">
+	<h1>Animation timeline</h1>
+	<div class="loader"></div>
+	<div class="scroll-item"></div>
+	<div class="scroll-item"></div>
+	<div class="scroll-item"></div>
+	<div class="scroll-item"></div>
+	<div class="scroll-item"></div>
+	<div class="scroll-item"></div>
+	<div class="scroll-item"></div>
+	<div class="scroll-item"></div>
+</div>

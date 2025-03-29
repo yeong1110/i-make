@@ -1,0 +1,90 @@
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .wrap {
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+    background: #444;
+  }
+
+  .flow-container {
+    position: relative;
+    width: 90%;
+    min-width: 1280px;
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+
+  .flow-item {
+    --time: 30s;
+    --item: 1;
+    --length: 8;
+    --width: 200px;
+    position: absolute;
+    width: var(--width);
+    height: 100px;
+    /* 오른쪽으로 흘러가고 싶으면 flowX와 left 교체 */
+    left: max(calc(var(--width) * 8), 100%);
+    background-color: slateblue;
+    animation: flowX var(--time) infinite linear;
+    animation-delay: calc(
+      (var(--time) / var(--length) * (var(--length) - var(--item))) * -1
+    );
+  }
+
+  @keyframes flowX {
+    100% {
+      left: calc(var(--width) * -1);
+    }
+  }
+
+  .flow-item:nth-child(1) {
+    --item: 1;
+  }
+  .flow-item:nth-child(2) {
+    --item: 2;
+  }
+  .flow-item:nth-child(3) {
+    --item: 3;
+  }
+  .flow-item:nth-child(4) {
+    --item: 4;
+  }
+  .flow-item:nth-child(5) {
+    --item: 5;
+  }
+  .flow-item:nth-child(6) {
+    --item: 6;
+  }
+  .flow-item:nth-child(7) {
+    --item: 7;
+  }
+  .flow-item:nth-child(8) {
+    --item: 8;
+  }
+</style>
+<div class="wrap">
+  <div class="flow-container">
+    <div class="flow-item"></div>
+    <div class="flow-item"></div>
+    <div class="flow-item"></div>
+    <div class="flow-item"></div>
+    <div class="flow-item"></div>
+    <div class="flow-item"></div>
+    <div class="flow-item"></div>
+    <div class="flow-item"></div>
+  </div>
+</div>

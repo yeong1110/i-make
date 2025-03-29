@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .wrap {
+        margin: 0;
+        width: clamp(80%, 100vw, 100%);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .blend-box {
+        position: relative;
+        width: 25rem;
+        height: 20rem;
+        padding: 2rem;
+        box-sizing: border-box;
+        background: #222;
+        border-radius: 10px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        transition: 0.24s linear 0.12s;
+      }
+
+      .blend-box > * {
+        transform: rotateY(180deg);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s linear;
+      }
+
+      .blend-box.active {
+        color: white;
+      }
+
+      .blend-box.active > * {
+        transform: rotateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .blend-box.active::after {
+        transform: translate(-50%, -50%) rotateY(0deg);
+      }
+
+      .blend-box::after {
+        content: "";
+        position: absolute;
+        padding: 2px;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateY(180deg);
+        background: linear-gradient(0deg, red, blue),
+          linear-gradient(to right, #5500ff, #00ff55);
+        background-blend-mode: screen;
+        filter: blur(1px);
+        border-radius: 10px;
+        animation: moveBox 3s linear infinite;
+        transition: 0.24s linear 0.12s;
+      }
+    </style>
+    <div class="wrap">
+      <div class="blend-box">
+        <h2>title</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor sed
+          laboriosam, eum facere dolorum maxime minus aspernatur delectus, aut
+          similique est consectetur, nobis veritatis nihil dolorem veniam
+          explicabo temporibus suscipit!
+        </p>
+      </div>
+      <div class="blend-box">
+        <h2>title</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor sed
+          laboriosam, eum facere dolorum maxime minus aspernatur delectus, aut
+          similique est consectetur, nobis veritatis nihil dolorem veniam
+          explicabo temporibus suscipit!
+        </p>
+      </div>
+      <div class="blend-box">
+        <h2>title</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor sed
+          laboriosam, eum facere dolorum maxime minus aspernatur delectus, aut
+          similique est consectetur, nobis veritatis nihil dolorem veniam
+          explicabo temporibus suscipit!
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    const blendBoxes = document.querySelectorAll(".blend-box");
+    console.log(blendBoxes);
+
+    function handleMouse(isEnter, e) {
+      isEnter
+        ? e.target.classList.add("active")
+        : e.target.classList.remove("active");
+    }
+
+    // 이벤트 리스너 등록 (Shadow DOM 내부 요소에 적용)
+    blendBoxes.forEach((box) => {
+      box.addEventListener("mouseenter", (e) => handleMouse(true, e));
+      box.addEventListener("mouseleave", (e) => handleMouse(false, e));
+    });
+  </script>
+</html>
