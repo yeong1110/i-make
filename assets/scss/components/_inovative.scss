@@ -1,0 +1,119 @@
+.inovative-section {
+  margin-top: 29px;
+}
+
+.inovative-wrap {
+  > ul {
+    display: grid;
+    gap: 36px;
+    grid-template-rows: repeat(3, 250px);
+    grid-auto-rows: 250px;
+    > li {
+      position: relative;
+      background: $main-color;
+      border-radius: 23px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      &:hover .inovative-hover-cont {
+        visibility: visible;
+        opacity: 1;
+      }
+      &:hover .inovative-img-cont {
+        filter: blur(5px);
+      }
+      .inovative-img-cont {
+        height: 100%;
+        border-radius: 23px;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+      p {
+        text-align: center;
+      }
+      .inovative-hover-cont {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(36, 23, 88, 0.62);
+        border-radius: 23px;
+        transition: 0.36s ease;
+        color: #fff;
+        .interactive-hover-area {
+          padding: 20px;
+          .link-story::before {
+            background: #fff;
+          }
+          .inovative-link-area {
+            margin-bottom: 10px;
+          }
+        }
+        h4 {
+          font-size: 16px;
+          font-weight: 700;
+          margin-bottom: 15px;
+        }
+        p {
+          text-align: start;
+          padding: 2px 0;
+          :first-of-type {
+            margin-top: 20px;
+          }
+          a {
+            font-weight: bold;
+            color: #fff;
+          }
+        }
+      }
+      .btn-wrap {
+        display: flex;
+        justify-content: space-around;
+        margin: 25px 0 0;
+        padding: 0;
+      }
+    }
+  }
+  @include deviceLarge() {
+    > ul {
+      grid-auto-rows: 340px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(auto-fill, 340px);
+      gap: 25px 150px;
+      > li {
+        .inovative-hover-cont {
+          .interactive-hover-area {
+            padding: 40px;
+            h4 {
+              font-size: $fsiz-nomal;
+            }
+          }
+        }
+      }
+    }
+    .inovative-elm-1 {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .inovative-elm-2 {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .inovative-elm-3 {
+      grid-column: 1;
+      grid-row: 3;
+    }
+    .inovative-elm-4 {
+      grid-column: 2;
+      grid-row: 4;
+    }
+    .inovative-elm-5 {
+      grid-column: 1;
+      grid-row: 5;
+    }
+  }
+}

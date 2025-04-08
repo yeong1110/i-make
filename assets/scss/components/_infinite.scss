@@ -1,0 +1,67 @@
+.infinite-section {
+  margin-top: 30px;
+  .swiper {
+    z-index: 0;
+    .swiper-wrapper {
+      .swiper-slide {
+        a {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          .infinite-img-cont {
+            height: 150px;
+            background: $main-color;
+            img {
+              object-fit: cover;
+            }
+          }
+          .infinite-text {
+            margin: 10px 0;
+            max-height: 30px;
+            text-wrap: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+    .swiper-btn-wrap {
+      display: flex;
+      margin-top: 8px;
+    }
+    .infinite-swiper-button-next,
+    .infinite-swiper-button-prev {
+      position: relative;
+      right: auto;
+      left: auto;
+      height: auto;
+      margin-top: 0;
+      color: #000;
+    }
+    .infinite-swiper-button-next::after,
+    .infinite-swiper-button-prev::after {
+      width: 20px;
+      height: 20px;
+      background-image: url("../images/swiper-polygon.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      font-size: 0;
+    }
+    .infinite-swiper-button-next::after {
+      transform: rotateY(180deg);
+    }
+  }
+  @include deviceLarge() {
+    .swiper {
+      .swiper-wrapper {
+        .swiper-slide {
+          a {
+            .infinite-img-cont {
+              height: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

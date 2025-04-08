@@ -1,0 +1,115 @@
+.interactive-section {
+  margin-top: 68px;
+  @include deviceLarge() {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    .title-area {
+      position: sticky;
+      top: 0;
+      left: 0;
+      max-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.interactive-wrap {
+  ul {
+    display: grid;
+    gap: 25px;
+    padding: 25px 0;
+    background-color: $main-color;
+    border-radius: 36px;
+    li {
+      position: relative;
+      width: 90%;
+      height: 200px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 23px;
+      overflow: hidden;
+      &:hover .interactive-text-cont {
+        top: 0;
+        border-radius: 23px;
+        background: #fff;
+      }
+      &:hover .interactive-hover-cont {
+        visibility: visible;
+        opacity: 1;
+      }
+      &:first-of-type .interactive-img-cont img {
+        object-position: center;
+      }
+      &:last-of-type {
+        margin: 0 auto;
+      }
+      .interactive-img-cont {
+        height: 100%;
+        border-radius: 23px;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+      .interactive-text-cont {
+        position: absolute;
+        top: 153px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: top 0.25s ease;
+        background: #ffffff8a;
+        p {
+          padding: 15px 0;
+        }
+      }
+      p {
+        text-align: center;
+      }
+      .interactive-hover-cont {
+        visibility: hidden;
+        opacity: 0;
+        .interactive-hover-area {
+          padding: 20px;
+        }
+        p {
+          text-align: start;
+          padding: 2px 20px;
+          :first-of-type {
+            margin-top: 20px;
+          }
+        }
+      }
+      .btn-wrap {
+        margin: 12px 0;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  @include deviceLarge() {
+    width: 50%;
+    ul {
+      li {
+        height: 350px;
+        .interactive-img-cont {
+          height: 100%;
+        }
+        .interactive-text-cont {
+          top: 304px;
+        }
+        .interactive-hover-cont {
+          p {
+            line-height: $lh;
+          }
+        }
+      }
+    }
+  }
+}

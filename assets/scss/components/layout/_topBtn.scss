@@ -1,0 +1,21 @@
+.top-area {
+  position: fixed;
+  display: flex;
+  width: 48px;
+  height: 48px;
+  bottom: 48px;
+  right: 48px;
+  #go-top {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+    @include deviceLarge() {
+      display: block;
+    }
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

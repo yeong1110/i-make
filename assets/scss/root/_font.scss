@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "IBMPlexSansKR-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039; /* 영어 대문자, 소문자, 숫자 */
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin fontSize($size) {
+  @if ($size == "s") {
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    font-weight: 400;
+  } @else if($size == "m") {
+    font-size: clamp(0.875rem, 1.8vw, 1rem);
+    font-weight: 400;
+  } @else if($size == "l") {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+  } @else if($size == "lFix") {
+    // 최대 24px로 고정
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
+  } @else if($size == "xl") {
+    // 최대 48px
+    font-size: clamp(2rem, 4vw, 4rem);
+  } @else if($size == "title") {
+    // 최대 38px
+    font-size: clamp(1.5rem, 2vw, 2.375rem);
+  }
+  @content;
+}
+
+html{
+	font-size: 1rem;
+}
+
+body {
+  @include fontSize(l);
+  font-family: "Pretendard-Regular", "noto-Sans", sans-serif;
+}

@@ -1,0 +1,24 @@
+// 배리어블
+@import "./variables/variables.scss";
+@import "./variables/mixins.scss";
+@import "./variables/funcs.scss";
+
+//setting
+@import "./root/root.scss";
+@import "./root/font.scss";
+@import "./root/btn.scss";
+@import "./root/title.scss";
+
+//media quary
+@import "./media/media.scss";
+
+//components
+@import "./components//layout/head.scss";
+@import "./components//layout/foot.scss";
+@import "./components//layout/topBtn.scss";
+
+
+//pages
+@import "./pages/main.scss";
+
+

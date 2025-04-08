@@ -1,0 +1,68 @@
+.i-can {
+  &-wrap {
+    height: 100%;
+    margin: 60px 0;
+    padding: 30px 0 0;
+    border-radius: $radious;
+    background: $main-color;
+    box-sizing: border-box;
+    h2 {
+      font-size: $fsiz-nomal + 4;
+      margin-bottom: 30px;
+      padding: 0 30px;
+    }
+    @include deviceLarge() {
+      margin-bottom: 200px;
+      padding: 30px 0;
+
+      border-radius: 0;
+      ul {
+        padding: 50px 30px;
+        box-shadow: none;
+      }
+      h2 {
+        font-size: $fsiz-little-big;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &-cont {
+    @include deviceLarge() {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+  &-text-cont {
+    margin-bottom: 0;
+    ul {
+      padding: 20px;
+      background: #ffffff73;
+      border-radius: $radious;
+      box-shadow: rgba(0, 0, 0, 0.45) 0px 13px 20px -20px;
+    }
+    h3 {
+      font-size: $fsiz-nomal - 2;
+      margin-bottom: 15px;
+      text-transform: capitalize;
+    }
+    p {
+      font-size: $main-font-sz;
+      margin-bottom: 20px;
+    }
+    @include deviceLarge() {
+      margin: 0;
+      width: 40%;
+      h3 {
+        font-size: $fsiz-nomal;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

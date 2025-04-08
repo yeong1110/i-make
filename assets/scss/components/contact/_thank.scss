@@ -1,0 +1,24 @@
+.thank-cont {
+  position: relative;
+  @include deviceLarge() {
+    margin: 100px 0;
+    p {
+      &::before {
+        font-size: $fsiz-big * 2;
+      }
+    }
+  }
+  ::before {
+    content: "THANKYOU";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #d9d9d9;
+    font-family: Noto Sans;
+    font-size: 40px;
+    font-weight: 700;
+    z-index: -1;
+  }
+}

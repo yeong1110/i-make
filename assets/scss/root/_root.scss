@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // 전체 스크롤바 디자인
+  &::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+    background: var(--black0);
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--black0);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--black100);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--black200);
+  }
+  @include deviceSmall() {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &::selection {
+    color: var(--primary-color);
+    background-color: var(--black0);
+  }
+}
+
+// firefox 스크롤바 지원
+@supports (-moz-appearance: none) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #ddd white;
+  }
+}
+
+html {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: #202020;
+}
+
+img {
+  width: $p100;
+  height: $p100;
+  object-fit: cover;
+}
+
+picture {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  object-fit: contain;
+}
+
+.infinite-img-cont picture {
+  display: contents;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.cont {
+  width: 90%;
+  margin: 0 auto;
+  @include deviceSmall() {
+    width: 60%;
+  }
+  @include deviceLarge() {
+    width: 100%;
+  }
+}
+
+.hidden {
+  overflow: hidden;
+  touch-action: none;
+}
