@@ -5,16 +5,6 @@
 .imagine-wrap {
   margin-left: auto;
   margin-right: auto;
-	@include deviceLarge() {
-		ul {
-      grid-template-columns: repeat(4, 1fr);
-      li {
-        width: 100%;
-        height: 280px;
-        margin: 0;
-      }
-    }
-	}
   .imagine-cont {
     flex-direction: row;
   }
@@ -23,6 +13,9 @@
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     gap: 10px;
+    @include deviceLarge() {
+      grid-template-columns: repeat(4, 1fr);
+    }
     li {
       min-width: 100%;
       height: 100px;
@@ -33,8 +26,11 @@
       overflow: hidden;
       border: 1px solid #d9d9d9;
       box-sizing: border-box;
-      @include deviceSmall() {
+      @include deviceMedium() {
         height: 150px;
+      }
+      @include deviceLarge() {
+        height: 250px;
       }
       .imagine-img-wrap {
         width: 100%;
