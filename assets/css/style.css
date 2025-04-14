@@ -308,15 +308,28 @@ footer {
 .i-can-wrap {
   height: 100%;
   margin: 60px 0;
-  padding: 30px 0 0;
-  border-radius: 36px;
+  padding: 30px 0;
   background: #e4edc1;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .i-can-wrap h2 {
+  position: relative;
+  text-align: center;
   font-size: 24px;
-  margin-bottom: 30px;
   padding: 0 30px;
+  display: flex;
+  justify-content: center;
+}
+.i-can-wrap h2 span:first-child,
+.i-can-wrap h2 span:last-child {
+  position: absolute;
+}
+.i-can-wrap h2 span:first-child {
+  color: white;
+}
+.i-can-wrap-cont {
+  overflow: hidden;
 }
 @media screen and (min-width: 1440px) {
   .i-can-wrap {
@@ -330,7 +343,6 @@ footer {
   }
   .i-can-wrap h2 {
     font-size: 38px;
-    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1440px) {
