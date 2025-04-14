@@ -73,6 +73,9 @@ h2 {
 }
 
 .cont {
+  position: relative;
+  z-index: 1;
+  background: #fff;
   width: 90%;
   margin: 0 auto;
   @include deviceSmall() {

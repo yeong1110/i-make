@@ -20,7 +20,7 @@
   width: 100%;
   height: 100%;
   border-radius: 8px;
-  background: #e4edc1;
+  background: orange;
   transition: clip-path 0.1s linear;
   clip-path: inset(5% 50% 15% 50%);
   z-index: -1;
@@ -141,6 +141,9 @@ h2 {
 }
 
 .cont {
+  position: relative;
+  z-index: 1;
+  background: #fff;
   width: 90%;
   margin: 0 auto;
 }
@@ -261,7 +264,7 @@ footer {
 }
 
 .i-am-wrap {
-  margin: 200px 0 0;
+  padding: 200px 0 0;
   text-align: center;
   line-height: 1.5;
 }
@@ -271,7 +274,7 @@ footer {
 .i-am-photo-cont {
   width: 200px;
   margin: 24px auto;
-  background: #e4edc1;
+  background: orange;
 }
 .i-am-text-1 {
   margin-bottom: 15px;
@@ -286,7 +289,7 @@ footer {
   font-weight: 400;
 }
 .i-am-text-2 a {
-  background: #e4edc1;
+  background: orange;
   position: relative;
   font-weight: 600;
 }
@@ -309,7 +312,7 @@ footer {
   height: 100%;
   margin: 60px 0;
   padding: 30px 0;
-  background: #e4edc1;
+  background: orange;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -388,42 +391,88 @@ footer {
 }
 
 .intro-wrap {
-  padding-top: 100px;
+  position: relative;
+  min-height: 50dvh;
+  max-height: 700px;
   display: flex;
   justify-content: center;
   font-family: "IBMPlexSansKR-Regular", "Pretendard-Regular";
+  overflow: hidden;
 }
-.intro-wrap h2 {
+.intro-wrap::before, .intro-wrap::after {
+  content: "";
   position: absolute;
   width: 100%;
-  top: 0;
-  left: 0;
-  text-align: end;
-  font-size: clamp(2rem, 4vw, 4rem);
+  height: 23%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+  height: 100%;
+  backdrop-filter: blur(4px);
 }
-@media screen and (min-width: 1440px) {
-  .intro-wrap h2 {
-    margin-top: 200px;
-  }
+.intro-wrap::after {
+  bottom: 0;
+  height: 23%;
+}
+.intro-wrap svg {
+  display: none;
+}
+.intro-wrap .wobble-text {
+  display: flex;
+  font-size: 50vh;
+  transition: filter 0.2s ease;
+  text-align: center;
+  color: orange;
+}
+.intro-wrap .wobble-text span:first-child {
+  text-shadow: 0 0 1px black;
+  color: greenyellow;
 }
 .intro-cont {
   position: relative;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: center;
 }
-@media screen and (min-width: 1440px) {
-  .intro-cont {
-    width: 80%;
-  }
+.intro-cont::before, .intro-cont::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 23%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+}
+.intro-cont::before:before, .intro-cont::before:after, .intro-cont::after:before, .intro-cont::after:after {
+  height: 10%;
+}
+.intro-cont::before::before, .intro-cont::after::before {
+  top: 35%;
+}
+.intro-cont::before::after, .intro-cont::after::after {
+  bottom: 35%;
 }
 @media screen and (min-width: 1440px) {
   .intro-after-wrap {
-    margin-top: 500px;
+    margin-top: 100px;
   }
 }
 
+.intro-wrap.active .intro-cont {
+  position: fixed;
+}
+.intro-wrap.active p {
+  animation: intro 1.3s linear forwards;
+}
+
+@keyframes intro {
+  0% {
+    letter-spacing: 2vw;
+  }
+  25% {
+    letter-spacing: -20vw;
+  }
+}
 .interactive-section {
   margin-top: 68px;
 }
@@ -450,7 +499,7 @@ footer {
   display: grid;
   gap: 25px;
   padding: 25px 0;
-  background-color: #e4edc1;
+  background-color: orange;
   border-radius: 36px;
 }
 .interactive-wrap ul li {
@@ -550,7 +599,7 @@ footer {
 }
 .inovative-wrap > ul > li {
   position: relative;
-  background: #e4edc1;
+  background: orange;
   border-radius: 23px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
@@ -669,7 +718,7 @@ footer {
 }
 .infinite-section .swiper .swiper-wrapper .swiper-slide a .infinite-img-cont {
   height: 150px;
-  background: #e4edc1;
+  background: orange;
 }
 .infinite-section .swiper .swiper-wrapper .swiper-slide a .infinite-img-cont img {
   object-fit: cover;
@@ -736,7 +785,7 @@ footer {
 .imagine-list {
   min-width: 100%;
   height: 100px;
-  background: #e4edc1;
+  background: orange;
   margin: 0 0.8771929825%;
   z-index: 0;
   border-radius: 4px;
@@ -901,7 +950,7 @@ footer {
   width: max-content;
   padding: 10px;
   margin: 0 auto;
-  background: #e4edc1;
+  background: orange;
   border-radius: 20px;
 }
 #alert.active > div {
