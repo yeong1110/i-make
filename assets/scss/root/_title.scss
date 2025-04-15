@@ -1,4 +1,17 @@
 .title {
   @include fontSize(title);
-	@include title;
+  @include title;
+}
+
+.title-area {
+  padding: 0 5%;
+  @include deviceLarge() {
+    padding: 0;
+  }
+  & + div {
+    padding: 0 5%;
+    @include deviceLarge() {
+      padding: 0;
+    }
+  }
 }

@@ -76,13 +76,14 @@ h2 {
   position: relative;
   z-index: 1;
   background: #fff;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  @include deviceSmall() {
-    width: 60%;
-  }
-  @include deviceLarge() {
-    width: 100%;
+  &::before {
+    @include blur() {
+      height: 50px;
+      top: -50px;
+      backdrop-filter: blur(4px);
+    }
   }
 }
 

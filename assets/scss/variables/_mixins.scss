@@ -84,10 +84,21 @@
   }
 }
 
+@mixin blur() {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 23%;
+  background-color: rgba($color: #ffff, $alpha: 0.1);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+  @content;
+}
+
 @mixin title {
   margin-bottom: 15px;
   text-transform: capitalize;
-	@content;
+  @content;
 }
 
 @mixin title-mgin {

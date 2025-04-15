@@ -1,12 +1,12 @@
 .i-am {
   &-wrap {
-    padding: 200px 0 0;
-    text-align: center;
+		text-align: center;
     line-height: $lh;
     h2 {
-      margin-top: 48px;
+			margin-top: 48px;
     }
-    @include deviceSmall() {
+    @include deviceLarge() {
+			padding: 200px 0 0;
     }
   }
   &-photo-cont {

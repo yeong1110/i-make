@@ -144,18 +144,20 @@ h2 {
   position: relative;
   z-index: 1;
   background: #fff;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
-@media screen and (min-width: 768px) {
-  .cont {
-    width: 60%;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .cont {
-    width: 100%;
-  }
+.cont::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 23%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+  height: 50px;
+  top: -50px;
+  backdrop-filter: blur(4px);
 }
 
 .hidden {
@@ -193,6 +195,23 @@ body {
   text-transform: capitalize;
 }
 
+.title-area {
+  padding: 0 5%;
+}
+@media screen and (min-width: 1440px) {
+  .title-area {
+    padding: 0;
+  }
+}
+.title-area + div {
+  padding: 0 5%;
+}
+@media screen and (min-width: 1440px) {
+  .title-area + div {
+    padding: 0;
+  }
+}
+
 @media (min-width: 1440px) {
   section {
     width: 1280px;
@@ -206,11 +225,13 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
   z-index: 100;
 }
 header nav {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
@@ -218,7 +239,6 @@ header nav {
 @media screen and (min-width: 1440px) {
   header nav {
     width: 80%;
-    margin: 0 auto;
   }
 }
 header nav h1 {
@@ -264,12 +284,16 @@ footer {
 }
 
 .i-am-wrap {
-  padding: 200px 0 0;
   text-align: center;
   line-height: 1.5;
 }
 .i-am-wrap h2 {
   margin-top: 48px;
+}
+@media screen and (min-width: 1440px) {
+  .i-am-wrap {
+    padding: 200px 0 0;
+  }
 }
 .i-am-photo-cont {
   width: 200px;
@@ -399,28 +423,13 @@ footer {
   font-family: "IBMPlexSansKR-Regular", "Pretendard-Regular";
   overflow: hidden;
 }
-.intro-wrap::before, .intro-wrap::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 23%;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  z-index: 1;
-  height: 100%;
-  backdrop-filter: blur(4px);
-}
-.intro-wrap::after {
-  bottom: 0;
-  height: 23%;
-}
 .intro-wrap svg {
   display: none;
 }
 .intro-wrap .wobble-text {
   display: flex;
-  font-size: 50vh;
   transition: filter 0.2s ease;
+  font-size: clamp(19vh, 10em, 20vw + 1rem);
   text-align: center;
   color: orange;
 }
@@ -428,29 +437,22 @@ footer {
   text-shadow: 0 0 1px black;
   color: greenyellow;
 }
+@media screen and (min-width: 1000px) {
+  .intro-wrap .wobble-text {
+    font-size: clamp(20vw, 20em, 20vw + 1rem);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .intro-wrap .wobble-text {
+    font-size: 50vh;
+  }
+}
 .intro-cont {
-  position: relative;
+  position: fixed;
   width: 100%;
   display: flex;
   justify-content: center;
-}
-.intro-cont::before, .intro-cont::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 23%;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  z-index: 1;
-}
-.intro-cont::before:before, .intro-cont::before:after, .intro-cont::after:before, .intro-cont::after:after {
-  height: 10%;
-}
-.intro-cont::before::before, .intro-cont::after::before {
-  top: 35%;
-}
-.intro-cont::before::after, .intro-cont::after::after {
-  bottom: 35%;
+  flex-direction: column;
 }
 @media screen and (min-width: 1440px) {
   .intro-after-wrap {
@@ -458,9 +460,6 @@ footer {
   }
 }
 
-.intro-wrap.active .intro-cont {
-  position: fixed;
-}
 .intro-wrap.active p {
   animation: intro 1.3s linear forwards;
 }
@@ -473,18 +472,31 @@ footer {
     letter-spacing: -20vw;
   }
 }
+@media screen and (min-width: 1440px) {
+  .wobble-wrap:not(:first-of-type) {
+    display: none;
+  }
+}
+
 .interactive-section {
-  margin-top: 68px;
+  padding: 68px 0;
+  background-color: orange;
+  width: 100%;
+}
+.interactive-section > div {
+  flex: 1;
 }
 @media screen and (min-width: 1440px) {
   .interactive-section {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: 100%;
   }
   .interactive-section .title-area {
     position: sticky;
+    width: auto;
+    margin: inherit;
     top: 0;
     left: 0;
     max-height: 100vh;
@@ -498,23 +510,34 @@ footer {
 .interactive-wrap ul {
   display: grid;
   gap: 25px;
-  padding: 25px 0;
   background-color: orange;
-  border-radius: 36px;
+  grid-template-columns: repeat(auto-fill, minmax(min(90%, 300px), 1fr));
+  grid-auto-rows: 250px;
+}
+@media screen and (min-width: 1000px) {
+  .interactive-wrap ul {
+    grid-auto-rows: 300px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .interactive-wrap ul {
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 350px;
+  }
 }
 .interactive-wrap ul li {
   position: relative;
-  width: 90%;
-  height: 200px;
+  width: 100%;
   margin: 0 auto;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 23px;
   overflow: hidden;
 }
 .interactive-wrap ul li:hover .interactive-text-cont {
   top: 0;
   border-radius: 23px;
-  background: #fff;
+  backdrop-filter: blur(8px);
 }
 .interactive-wrap ul li:hover .interactive-hover-cont {
   visibility: visible;
@@ -537,12 +560,17 @@ footer {
 }
 .interactive-wrap ul li .interactive-text-cont {
   position: absolute;
-  top: 153px;
+  top: 80%;
   left: 0;
   width: 100%;
   height: 100%;
   transition: top 0.25s ease;
   background: rgba(255, 255, 255, 0.5411764706);
+}
+@media screen and (min-width: 1000px) {
+  .interactive-wrap ul li .interactive-text-cont {
+    top: 85%;
+  }
 }
 .interactive-wrap ul li .interactive-text-cont p {
   padding: 15px 0;
@@ -570,11 +598,8 @@ footer {
   justify-content: center;
 }
 @media screen and (min-width: 1440px) {
-  .interactive-wrap {
-    width: 50%;
-  }
   .interactive-wrap ul li {
-    height: 350px;
+    width: 50%;
   }
   .interactive-wrap ul li .interactive-img-cont {
     height: 100%;
