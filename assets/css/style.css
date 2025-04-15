@@ -793,6 +793,9 @@ footer {
   border: 1px solid #d9d9d9;
   box-sizing: border-box;
 }
+.imagine-list:hover .imagine-thumb {
+  display: none;
+}
 @media screen and (min-width: 1000px) {
   .imagine-list {
     height: 150px;
@@ -802,6 +805,10 @@ footer {
   .imagine-list {
     height: 250px;
   }
+}
+.imagine-thumb {
+  position: absolute;
+  z-index: 1;
 }
 .imagine-img-wrap {
   width: 100%;

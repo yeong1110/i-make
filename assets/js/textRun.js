@@ -8,7 +8,7 @@ function scrollActive() {
     let elHeight = elBottom - elTop;
     if (elTop.toFixed() <= 500 && elBottom.toFixed() >= -1) {
       let persentage = ((elTop - 500) / elHeight) * 100;
-      console.log(el.classList);
+      // console.log(el.classList);
       el.classList.add("active");
       if (el.classList.contains("scrollRun1")) {
         el.style.transform = `translateX(-${Math.abs(persentage).toFixed()}%)`;

@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const shadowRoot = el.attachShadow({ mode: "open" });
 
     // 초기 로드 (특정 index만 로드)
-    if (index === randomNum || index === 0) {
-      loadContent(src, shadowRoot, index);
-    }
+    // if (index === randomNum || index === 0) {
+    //   loadContent(src, shadowRoot, index);
+    // }
 
     // 마우스 이벤트 등록
     el.addEventListener("mouseenter", () =>
