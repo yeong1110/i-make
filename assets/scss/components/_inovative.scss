@@ -8,11 +8,13 @@
     gap: 36px;
     grid-template-rows: repeat(3, 250px);
     grid-auto-rows: 250px;
+    perspective: 1000px;
     > li {
       position: relative;
       background: $main-color;
       border-radius: 23px;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      transform-style: preserve-3d;
       &:hover .inovative-hover-cont {
         visibility: visible;
         opacity: 1;
@@ -92,6 +94,17 @@
               font-size: $fsiz-nomal;
             }
           }
+        }
+      }
+    }
+    li {
+			transition: transform .4s ease;
+      &.active {
+        &:nth-child(odd) {
+          transform: rotateY(14deg) translateZ(-100px) !important;
+        }
+        &:nth-child(even) {
+          transform: rotateY(-14deg) translateZ(-100px) !important;
         }
       }
     }

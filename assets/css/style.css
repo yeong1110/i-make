@@ -631,12 +631,14 @@ footer {
   gap: 36px;
   grid-template-rows: repeat(3, 250px);
   grid-auto-rows: 250px;
+  perspective: 1000px;
 }
 .inovative-wrap > ul > li {
   position: relative;
   background: orange;
   border-radius: 23px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transform-style: preserve-3d;
 }
 .inovative-wrap > ul > li:hover .inovative-hover-cont {
   visibility: visible;
@@ -713,6 +715,15 @@ footer {
   }
   .inovative-wrap > ul > li .inovative-hover-cont .interactive-hover-area h4 {
     font-size: 20px;
+  }
+  .inovative-wrap li {
+    transition: transform 0.4s ease;
+  }
+  .inovative-wrap li.active:nth-child(odd) {
+    transform: rotateY(14deg) translateZ(-100px) !important;
+  }
+  .inovative-wrap li.active:nth-child(even) {
+    transform: rotateY(-14deg) translateZ(-100px) !important;
   }
   .inovative-wrap .inovative-elm-1 {
     grid-column: 1;
