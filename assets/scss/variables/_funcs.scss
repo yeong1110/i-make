@@ -1,0 +1,7 @@
+@function animation($name) {
+  $list: (
+    fadeUp: translate3d(0,100px,0),
+  );
+  $animation: map-get($list, $name);
+  @return $animation;
+}

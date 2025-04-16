@@ -212,6 +212,19 @@ body {
   }
 }
 
+.scroll {
+  opacity: 0;
+  transition: opacity, transform 0.5s ease;
+  transition-delay: 200ms;
+}
+.scroll.fade-up {
+  transform: translate3d(0, 100px, 0);
+}
+.scroll.active {
+  opacity: 1;
+  transform: none;
+}
+
 @media (min-width: 1440px) {
   section {
     width: 1280px;

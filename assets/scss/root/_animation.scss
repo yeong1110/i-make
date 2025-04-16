@@ -1,0 +1,10 @@
+.scroll {
+  @include animation;
+	&.fade-up {
+		transform: animation(fadeUp);
+	}
+  &.active {
+		opacity: 1;
+		transform: none;
+  }
+}
