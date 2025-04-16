@@ -535,7 +535,7 @@ footer {
 @media screen and (min-width: 1440px) {
   .interactive-wrap ul {
     padding: 0;
-    grid-template-columns: 1fr;
+    grid-template-columns: 0.5fr;
     grid-auto-rows: 350px;
   }
 }
@@ -611,9 +611,6 @@ footer {
   justify-content: center;
 }
 @media screen and (min-width: 1440px) {
-  .interactive-wrap ul li {
-    width: 50%;
-  }
   .interactive-wrap ul li .interactive-img-cont {
     height: 100%;
   }

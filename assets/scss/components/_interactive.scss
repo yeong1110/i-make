@@ -37,7 +37,7 @@
 		}
 		@include deviceLarge(){
 			padding: 0;
-			grid-template-columns: 1fr;
+			grid-template-columns: 0.5fr;
 			grid-auto-rows: 350px;
 		}
     li {
@@ -114,7 +114,6 @@
   @include deviceLarge() {
     ul {
       li {
-				width: 50%;
         .interactive-img-cont {
           height: 100%;
         }
