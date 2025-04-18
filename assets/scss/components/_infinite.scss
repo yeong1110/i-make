@@ -9,7 +9,7 @@
           flex-direction: column;
           overflow: hidden;
           .infinite-img-cont {
-            height: 150px;
+						aspect-ratio: 1;
             background: $main-color;
             img {
               object-fit: cover;

@@ -16,18 +16,6 @@
   .we-animate-1 {
     margin: 15px 0;
     display: flex;
-    :first-child {
-      // transform: rotate(-30.924deg);
-    }
-    :nth-child(2) {
-      // transform: rotate(12.565deg);
-    }
-    :nth-child(3) {
-      // transform: rotate(-14.849deg);
-    }
-    :last-child {
-      // transform: rotate(23.129deg);
-    }
   }
 }
 
@@ -46,4 +34,10 @@
     font-size: 24px;
     text-align: center;
   }
+}
+
+.we-text{
+	span{
+		display: inline-flex;
+	}
 }

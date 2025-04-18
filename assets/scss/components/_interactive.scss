@@ -1,10 +1,9 @@
 .interactive-section {
   padding: 68px 0;
-	background-color: $main-color;
-	width: 100%;
-	>div{
-		flex: 1;
-	}
+  width: 100%;
+  > div {
+    flex: 1;
+  }
   @include deviceLarge() {
     position: relative;
     display: flex;
@@ -12,8 +11,9 @@
     height: 100%;
     .title-area {
       position: sticky;
-			width: auto;
-			margin: inherit;
+      z-index: 2;
+      width: auto;
+      margin: inherit;
       top: 0;
       left: 0;
       max-height: 100vh;
@@ -27,19 +27,21 @@
 
 .interactive-wrap {
   ul {
+    position: relative;
+    z-index: 1;
     display: grid;
-    gap: 25px;
-    background-color: $main-color;
-		grid-template-columns: repeat(auto-fill, minmax(min(90%, 300px), 1fr));
-		grid-auto-rows: 250px;
-		@include deviceMedium(){
-			grid-auto-rows: 300px;
-		}
-		@include deviceLarge(){
-			padding: 0;
-			grid-template-columns: 0.5fr;
-			grid-auto-rows: 350px;
-		}
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(min(90%, 300px), 1fr));
+    grid-auto-rows: 250px;
+    @include deviceMedium() {
+      grid-auto-rows: 300px;
+    }
+    @include deviceLarge() {
+      padding: 0;
+      grid-template-columns: 0.5fr;
+      grid-auto-rows: 350px;
+			gap: 120px;
+    }
     li {
       position: relative;
       width: 100%;
@@ -51,7 +53,7 @@
       &:hover .interactive-text-cont {
         top: 0;
         border-radius: 23px;
-				backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
       }
       &:hover .interactive-hover-cont {
         visibility: visible;
@@ -80,9 +82,9 @@
         height: 100%;
         transition: top 0.25s ease;
         background: #ffffff8a;
-				@include deviceMedium(){
-					top: 85%;
-				}
+        @include deviceMedium() {
+          top: 85%;
+        }
         p {
           padding: 15px 0;
         }
@@ -128,4 +130,67 @@
       }
     }
   }
+}
+
+// bg change
+@include deviceLarge() {
+	.interactive-section {
+		transition: all 0.5s ease;
+		&::after {
+			position: absolute;
+			inset: 0;
+			z-index: 0;
+			content: "";
+			width: 100%;
+			height: 100%;
+			filter: blur(8px) opacity(0.8);
+			background-size: 100%;
+		}
+	
+		&:has(.interactive-list:nth-child(1).active) {
+			&::after {
+				background-image: url("../images/interactive/logo.svg");
+			}
+		}
+		&:has(.interactive-list:nth-child(2).active) {
+			&::after {
+				background-image: url("../images/interactive/inter-2.webp");
+			}
+		}
+		&:has(.interactive-list:nth-child(3).active) {
+			&::after {
+				background-image: url("../images/interactive/monday.png");
+			}
+		}
+		&:has(.interactive-list:nth-child(4).active) {
+			&::after {
+				background-image: url("../images/interactive/diva.png");
+			}
+		}
+		&:has(.interactive-list:nth-child(5).active) {
+			&::after {
+				background-image: url("../images/interactive/kanu.png");
+			}
+		}
+		&:has(.interactive-list:nth-child(6).active) {
+			&::after {
+				background-image: url("../images/interactive/didi.png");
+			}
+		}
+		&:has(.interactive-list:nth-child(7).active) {
+			&::after {
+				background-image: url("../images/interactive/lotte.png");
+			}
+		}
+		&:has(.interactive-list:nth-child(8).active) {
+			&::after {
+				background-image: url("../images/interactive/mong.png");
+			}
+		}
+		&:has(.interactive-list:nth-child(9).active) {
+			&::after {
+				background-image: url("../images/interactive/build.png");
+			}
+		}
+	}
 }

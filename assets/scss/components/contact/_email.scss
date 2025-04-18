@@ -5,6 +5,10 @@
     font-size: $fsiz-nomal;
   }
   .email-cont {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
     margin-bottom: 68px;
     h3 {
       font-weight: 400;
@@ -25,6 +29,7 @@
   width: 100%;
   bottom: 10%;
   left: 0;
+	z-index: 2;
   > div {
     visibility: hidden;
     opacity: 0;
@@ -32,11 +37,12 @@
     width: max-content;
     padding: 10px;
     margin: 0 auto;
-    background: $main-color;
+    background: rgba($color: $main-color, $alpha: 0.2);
+		backdrop-filter: blur(4px);
     border-radius: 20px;
   }
   &.active > div {
-    animation: fadeUp 2.6s ease-in-out forwards;
+    animation: fadeUp 2s ease-in-out forwards;
   }
   @include deviceSmall() {
     display: block;
@@ -49,7 +55,7 @@
     opacity: 0;
     transform: translateY(0);
   }
-  50% {
+  80% {
     visibility: visible;
     opacity: 1;
     transform: translateY(-20%);
