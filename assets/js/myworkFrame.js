@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const imagineFrames = document.querySelectorAll(
     ".imagine-cont li .imagine-frame"
   );
-  const randomNum = getRandomInt(0, imagineFrames.length);
 
   imagineFrames.forEach((el, index) => {
     if (!el) return;
@@ -10,11 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const attr = el.getAttribute("data-src");
     const src = `imagines/${attr}.html`;
     const shadowRoot = el.attachShadow({ mode: "open" });
-
-    // 초기 로드 (특정 index만 로드)
-    // if (index === randomNum || index === 0) {
-    //   loadContent(src, shadowRoot, index);
-    // }
 
     // 마우스 이벤트 등록
     el.addEventListener("mouseenter", () =>
@@ -88,11 +82,4 @@ function applySvgAnimation(svgElement) {
     el.style.setProperty("--delay", `${i * 100}ms`);
     el.style.setProperty("--duration", `${length * 10}ms`);
   });
-}
-
-// 난수생성
-function getRandomInt(min, max) {
-  return Math.floor(
-    Math.random() * (Math.floor(max) - Math.ceil(min)) + Math.ceil(min)
-  );
 }

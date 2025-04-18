@@ -1,5 +1,3 @@
-AOS.init();
-
 const address = document.getElementById("myAddress");
 const myAlert = document.querySelector("#alert");
 const btt = document.querySelector("#go-top");
@@ -26,7 +24,7 @@ address.addEventListener("click", function (e) {
 document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
     let scrollAmount = window.scrollY;
-    if (scrollAmount > 600) {
+    if (scrollAmount > 100) {
       btt.className = "active";
     } else {
       btt.classList.remove("active");
@@ -82,27 +80,14 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
-
-  // we.addLabel("start")
-  //   .from(".i-1", { autoAlpha: 0 })
-  //   .addLabel("start1")
-  //   .to(".i-1", { x: 0, y: 0, scale: 1.2 })
-  //   .addLabel("start2")
-  //   .from(".i-2", { autoAlpha: 0 })
-  //   .to(".i-2", { rotation: -15.924, x: 0, y: 0, scale: 1.2 })
-  //   .addLabel("start3")
-  //   .from(".i-3", { autoAlpha: 0 })
-  //   .to(".i-3", { rotation: -14.849, x: 0, y: 0, scale: 1.2 })
-  //   .addLabel("start4")
-  //   .from(".i-4", { autoAlpha: 0 })
-  //   .to(".i-4", { rotation: 23.129, x: 0, y: 0, scale: 1.2 })
-  //   .addLabel("end")
-  //   .to(".i-1", { rotation: 18 })
-  //   .from(".i-5", { autoAlpha: 0, x: 0, y: 0 })
-  //   .to(".i-5", { x: 0, y: 0 })
-  //   .to(".we-animate-1", { opacity: 0, display: "none" })
-  //   .to(".we-animate-2 h4", { opacity: 1 });
 });
+
+// 난수생성
+function getRandomInt(min, max) {
+  return Math.floor(
+    Math.random() * (Math.floor(max) - Math.ceil(min)) + Math.ceil(min)
+  );
+}
 
 const setSwiper = (id, object) => {
   new Swiper(id, object);
