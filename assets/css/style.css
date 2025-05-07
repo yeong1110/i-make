@@ -675,7 +675,7 @@ footer {
 .inovative-wrap > ul {
   display: grid;
   gap: 36px;
-  grid-template-rows: repeat(3, 250px);
+  grid-template-columns: repeat(auto-fit, minmax(min(90%, 300px), 1fr));
   grid-auto-rows: 250px;
   perspective: 1000px;
 }
