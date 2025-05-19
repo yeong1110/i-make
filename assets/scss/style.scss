@@ -14,9 +14,10 @@
 @import "./media/media.scss";
 
 //components
-@import "./components//layout/head.scss";
-@import "./components//layout/foot.scss";
-@import "./components//layout/topBtn.scss";
+@import "./components/layout/head.scss";
+@import "./components/layout/toggle.scss";
+@import "./components/layout/foot.scss";
+@import "./components/layout/topBtn.scss";
 
 //pages
 @import "./pages/main.scss";
