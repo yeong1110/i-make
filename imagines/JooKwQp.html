@@ -1,0 +1,51 @@
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hover-card {
+    --bg: var(--data-bg);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    ul {
+      display: flex;
+      gap: 1rem;
+    }
+    li {
+      list-style: none;
+      width: min(3vw, 200px);
+      aspect-ratio: 1 / 3;
+      background-color: var(--data-bg);
+      filter: hue-rotate(0deg);
+      transition: all 0.34s ease-in;
+    }
+    li:hover {
+      filter: hue-rotate(90deg);
+    }
+    li:hover + * {
+      filter: hue-rotate(45deg);
+    }
+    li:hover + * + * {
+      filter: hue-rotate(20deg);
+    }
+    li:has(+ *:hover) {
+      filter: hue-rotate(45deg);
+    }
+    li:has(+ * + *:hover) {
+      filter: hue-rotate(20deg);
+    }
+  }
+</style>
+<div class="hover-card">
+  <ul>
+    <li style="--data-bg: orange"></li>
+    <li style="--data-bg: red"></li>
+    <li style="--data-bg: blue"></li>
+    <li style="--data-bg: lime"></li>
+    <li style="--data-bg: purple"></li>
+  </ul>
+</div>
