@@ -39,10 +39,19 @@
 html {
   width: 100%;
   height: auto;
+  color-scheme: light dark;
+  &[data-color-scheme="light"] {
+    color-scheme: light;
+  }
+
+  &[data-color-scheme="dark"] {
+    color-scheme: dark;
+  }
+  color: $text;
 }
 
 a {
-  color: #202020;
+  color: $text;
 }
 
 img {
@@ -70,12 +79,13 @@ h2 {
   width: 100%;
   margin: 0 auto;
   height: 100%;
+  background: $bg;
 }
 
 .cont {
   position: relative;
   z-index: 1;
-  background: #fff;
+  background: $bg;
   width: 100%;
   margin: 0 auto;
   &::before {

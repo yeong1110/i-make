@@ -1,0 +1,7 @@
+.btn-original {
+  @include btn-original();
+}
+
+.btn-square {
+  @include btn-square();
+}

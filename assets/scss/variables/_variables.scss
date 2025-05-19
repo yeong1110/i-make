@@ -6,9 +6,32 @@ $fsiz-nomal: 20px;
 // $main-color: #e4edc1;
 // $main-color: #adffef;
 // $main-color: #2a2aff;
-$main-color: orange;
+$main-light-color: #ffa500;
+$main-dark-color: #343434;
+$primary-light: #ffa500;
+$primary-dark: #ff8c00;
+$text-light: #202020;
+$text-dark: #eaeaea;
+$bg-light: #ffffff;
+$bg-dark: 	#1E1E1E;
+$sub-bg-light: #dddddd;
+$sub-bg-dark: 	#5f5f5f;
+$border-light: #dddddd;
+$border-dark: 	#5f5f5f;
+$backdrop-light: rgba(#ffffff, 0.2);
+$backdrop-dark: rgba(#1e1e1e, 0.2);
+
+$main-color: #ffa500;
+$primary: light-dark($primary-light, $primary-dark);
+$text: light-dark($text-light, $text-dark);
+$bg: light-dark($bg-light, $bg-dark);
+$sub-bg: light-dark($sub-bg-light, $sub-bg-dark);
+$backdrop: light-dark($backdrop-light, $backdrop-dark);
+$border: light-dark($border-light, $border-dark);
 $lh: 1.5;
+$ls: -0.04em;
 $radious: 36px;
+$main-br: 3px;
 
 // device
 $device_small: 768px;

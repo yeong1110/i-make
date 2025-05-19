@@ -1,6 +1,15 @@
 const address = document.getElementById("myAddress");
 const myAlert = document.querySelector("#alert");
 const btt = document.querySelector("#go-top");
+const themeToggle = document.querySelector(".theme input");
+
+themeToggle.addEventListener("click", () => {
+  if (themeToggle.checked) {
+    setColorScheme("dark");
+  } else {
+    setColorScheme("light");
+  }
+});
 
 //클립보드
 function copy(e) {
@@ -22,6 +31,7 @@ address.addEventListener("click", function (e) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  setColorScheme("system");
   window.addEventListener("scroll", function () {
     let scrollAmount = window.scrollY;
     if (scrollAmount > 100) {
@@ -92,3 +102,8 @@ function getRandomInt(min, max) {
 const setSwiper = (id, object) => {
   new Swiper(id, object);
 };
+
+//system color
+function setColorScheme(mode) {
+  document.documentElement.dataset.colorScheme = mode;
+}
