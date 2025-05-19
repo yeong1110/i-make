@@ -7,24 +7,33 @@
     display: grid;
     gap: 36px;
     grid-template-columns: repeat(auto-fit, minmax(min(90%, 300px), 1fr));
-    grid-auto-rows: 250px;
     perspective: 1000px;
     > li {
       position: relative;
-      background: $main-color;
-      border-radius: 23px;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      border-radius: $main-br;
+      aspect-ratio: 1 / 0.6;
       transform-style: preserve-3d;
+      overflow: hidden;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      transition: transform 0.4s ease;
       &:hover .inovative-hover-cont {
         visibility: visible;
         opacity: 1;
       }
       &:hover .inovative-img-cont {
-        filter: blur(5px);
+        mask: linear-gradient(black calc(100% - 4vw), transparent);
+      }
+      &.active {
+        &:nth-child(odd) {
+          transform: rotateY(14deg) translateZ(-100px) !important;
+        }
+        &:nth-child(even) {
+          transform: rotateY(-14deg) translateZ(-100px) !important;
+        }
       }
       .inovative-img-cont {
         height: 100%;
-        border-radius: 23px;
+        border-radius: $main-br;
         overflow: hidden;
         img {
           object-fit: cover;
@@ -35,6 +44,8 @@
         text-align: center;
       }
       .inovative-hover-cont {
+        $backdrop: light-dark(rgba(#ffffff, 0.8), rgba(#1e1e1e, 0.8));
+        @include backdrop(0.8);
         visibility: hidden;
         opacity: 0;
         position: absolute;
@@ -42,10 +53,10 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(36, 23, 88, 0.62);
-        border-radius: 23px;
+        background: $backdrop;
+        backdrop-filter: blur(10px);
+        border-radius: $main-br;
         transition: 0.36s ease;
-        color: #fff;
         .interactive-hover-area {
           padding: 20px;
           .link-story::before {
@@ -68,7 +79,6 @@
           }
           a {
             font-weight: bold;
-            color: #fff;
           }
         }
       }
@@ -84,7 +94,6 @@
     > ul {
       grid-auto-rows: 340px;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(auto-fill, 340px);
       gap: 25px 150px;
       > li {
         .inovative-hover-cont {
@@ -108,29 +117,18 @@
         }
       }
     }
-    .inovative-elm-1 {
-      grid-column: 1;
-      grid-row: 1;
-    }
-    .inovative-elm-2 {
-      grid-column: 2;
-      grid-row: 2;
-    }
-    .inovative-elm-3 {
-      grid-column: 1;
-      grid-row: 3;
-    }
-    .inovative-elm-4 {
-      grid-column: 2;
-      grid-row: 4;
-    }
-    .inovative-elm-5 {
-      grid-column: 1;
-      grid-row: 5;
-    }
-    .inovative-elm-6 {
-      grid-column: 2;
-      grid-row: 6;
+    .inovative-list {
+      &:nth-child(odd) {
+        grid-column: 1;
+      }
+      &:nth-child(even) {
+        grid-column: 2;
+      }
+      @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+          grid-row: $i;
+        }
+      }
     }
   }
 }
