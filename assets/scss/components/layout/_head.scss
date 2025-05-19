@@ -2,31 +2,66 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  background: rgba($color: #ffffff, $alpha: 0.2);
-	backdrop-filter: blur(4px);
+  background: $backdrop;
+  backdrop-filter: blur(4px);
   z-index: 100;
   nav {
-    width: 90%;
-		margin: 0 auto;
+    margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 10px 16px;
     @include deviceLarge() {
       width: 80%;
     }
     h1 {
-      height: 24px;
+      $random: random(
+        $limit: 2,
+      );
       a {
-        img {
-          height: 24px;
+        @include fontSize(title);
+        font-weight: 800;
+        letter-spacing: -1px;
+        background-image: linear-gradient($text, $text);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        -webkit-text-stroke: 0.5px $text;
+        -webkit-background-clip: text;
+        color: transparent;
+        &:last-child {
+          display: none;
+        }
+      }
+      @if ($random == 1) {
+        a:last-child {
+          display: flex;
+        }
+        a:first-child {
+          display: none;
+        }
+      }
+      &:hover {
+        a {
+          animation: textFill 2s linear forwards;
         }
       }
     }
     ul {
       display: flex;
+      align-items: center;
       li {
         padding: 10px 8px;
+        font-weight: 500;
       }
     }
+  }
+}
+
+@keyframes textFill {
+  0% {
+    background-position: 0 0;
+  }
+  80% {
+    background-position: -200px 0;
   }
 }

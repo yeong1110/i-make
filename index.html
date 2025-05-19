@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -40,14 +40,23 @@
 			<header>
 					<nav>
 							<h1>
-									<a href="#">
-											<img src="assets/images/I-logo.svg" alt="로고">
+									<a href="./">
+										I-make
+											<!-- <img src="assets/images/I-logo.svg" alt="로고"> -->
 									</a>
+									<a href="https://yeong1110.github.io/windowyeong">WindowY</a>
 							</h1>
 							<ul class="navi-area">
-									<li><a href="#i-am" >I am</a></li>
-									<li><a href="#interactive" >My work</a></li>
-									<li><a href="#contact" >contact</a></li>
+								<li>
+									<div class="theme">
+										<label>
+											<input type="checkbox">
+											<span class="switch"></span>
+										</label>
+									</div>
+								</li>
+								<li><a href="#interactive" >Projects</a></li>
+								<li><a href="#contact" >Contact</a></li>
 							</ul>
 					</nav>
 			</header>
@@ -109,9 +118,15 @@
 							<article class="i-can-wrap">
 									<div class="i-can-cont">
 											<h2>
-												<span>I Love Interactve WEB</span>
-												<span class="isScroll scrollRun2">I Love Interactve WEB</span>
-												<span class="isScroll scrollRun1">I Love Interactve WEB</span>
+												<span class="isScroll scrollBack">I Love Interactve WEB</span>
+												<span class="isScroll scrollBack">I Love Interactve WEB</span>
+												<span class="isScroll scrollBack">I Love Interactve WEB</span>
+												<span class="isScroll scrollBack">I Love Interactve WEB</span>
+												<span class="isScroll scrollBack">I Love Interactve WEB</span>
+												<span class="isScroll scrollBack">I Love Interactve WEB</span>
+												<span class="isScroll scrollBack">I Love Interactve WEB</span>
+												<span class="isScroll scrollBack">I Love Interactve WEB</span>
+												<span class="isScroll scrollBack">I Love Interactve WEB</span>
 											</h2>
 									</div>
 							</article>
@@ -124,10 +139,11 @@
 									<div class="interactive-wrap">
 											<ul class="interactive-lists">
 													<li class="isScroll interactive-list">
-															<div class="interactive-img-cont">
-																	<img src="assets/images/interactive/logo.svg" alt="단어장">
-															</div>
-															<div class="interactive-text-cont">
+														<div class="interactive-img-cont">
+															<img src="assets/images/interactive/logo.svg" alt="단어장">
+														</div>
+														<div class="interactive-text-cont">
+																	<a class="interactive-list-link" href="https://www.vocabox.kro.kr" target="_blank"></a>
 																	<p>단어장 프로젝트</p>
 																	<div class="interactive-hover-cont">
 																			<div class="interactive-hover-area">
@@ -137,7 +153,7 @@
 																					<p>test id / pw : test1 / 12341234</p>
 																					
 																					<div class="btn-wrap">
-																							<a target="_blank" href="https://www.vocabox.kro.kr/" class="btn-original">보러가기</a>
+																							<a target="_blank" href="https://www.vocabox.kro.kr/" class="btn-original">VIEW</a>
 																					</div>
 																			</div>
 																	</div>
@@ -169,21 +185,22 @@
 													</li>
 													<li class="isScroll interactive-list">
 															<div class="interactive-img-cont">
-																	<img src="assets/images/interactive/monday.png" alt="월요편지">
+																<img src="assets/images/interactive/monday.png" alt="월요편지">
 															</div>
 															<div class="interactive-text-cont">
-																	<p>월요편지</p>
-																	<div class="interactive-hover-cont">
-																		<div class="interactive-hover-area">
-																			<p>참여 인원 : 3</p>
-																			<p>맡은 분야 : 퍼블리싱</p>
-																			<p>기술 스택 : tailwind, js</p>
-																			<p>협업 툴 : figma, slack</p>
-																			<div class="btn-wrap">
-																					<a target="_blank" href="https://www.mondayletter.com" class="btn-original">보러가기</a>
-																			</div>
-																	</div>
-																	</div>
+																<a class="interactive-list-link" href="https://www.mondayletter.com" target="_blank"></a>
+																<p>월요편지</p>
+																<div class="interactive-hover-cont">
+																	<div class="interactive-hover-area">
+																		<p>참여 인원 : 3</p>
+																		<p>맡은 분야 : 퍼블리싱</p>
+																		<p>기술 스택 : tailwind, js</p>
+																		<p>협업 툴 : figma, slack</p>
+																		<div class="btn-wrap">
+																				<a target="_blank" href="https://www.mondayletter.com" class="btn-original">VIEW</a>
+																		</div>
+																</div>
+																</div>
 															</div>
 													</li>
 													<li class="isScroll interactive-list">
@@ -207,6 +224,7 @@
 															<img src="assets/images/interactive/kanu.png" alt="카누">
 													</div>
 													<div class="interactive-text-cont">
+															<a class="interactive-list-link" href="https://kanu.co.kr" target="_blank"></a>
 															<p>카누</p>
 															<div class="interactive-hover-cont">
 																<div class="interactive-hover-area">
@@ -215,7 +233,7 @@
 																	<p>기술 스택 : tailwind, js</p>
 																	<p>협업 툴 : figma, slack</p>
 																	<div class="btn-wrap">
-																			<a target="_blank" href="https://kanu.co.kr" class="btn-original">보러가기</a>
+																			<a target="_blank" href="https://kanu.co.kr" class="btn-original">VIEW</a>
 																	</div>
 															</div>
 															</div>
@@ -226,6 +244,7 @@
 															<img src="assets/images/interactive/didi.png" alt="디디에두보">
 													</div>
 													<div class="interactive-text-cont">
+																<a class="interactive-list-link" href="https://didierdubot.co.kr" target="_blank"></a>
 															<p>디디에두보</p>
 															<div class="interactive-hover-cont">
 																<div class="interactive-hover-area">
@@ -235,7 +254,7 @@
 																	<p>기술 스택 : tailwind, js</p>
 																	<p>협업 툴 : figma, slack</p>
 																	<div class="btn-wrap">
-																			<a target="_blank" href="https://didierdubot.co.kr" class="btn-original">보러가기</a>
+																			<a target="_blank" href="https://didierdubot.co.kr" class="btn-original">VIEW</a>
 																	</div>
 															</div>
 															</div>
@@ -262,6 +281,7 @@
 															<img src="assets/images/interactive/mong.png" alt="몽디에스">
 													</div>
 													<div class="interactive-text-cont">
+														<a class="interactive-list-link" href="https://mongdies.com" target="_blank"></a>
 														<p>몽디에스</p>
 														<div class="interactive-hover-cont">
 															<div class="interactive-hover-area">
@@ -271,7 +291,7 @@
 																<p>기술 스택 : tailwind, js</p>
 																<p>협업 툴 : slack, figma</p>
 																<div class="btn-wrap">
-																		<a target="_blank" href="https://mongdies.com" class="btn-original">보러가기</a>
+																		<a target="_blank" href="https://mongdies.com" class="btn-original">VIEW</a>
 																</div>
 															</div>
 															</div>
@@ -282,6 +302,7 @@
 															<img src="assets/images/interactive/build.png" alt="빌드">
 													</div>
 													<div class="interactive-text-cont">
+															<a class="interactive-list-link" href="https://build112.cafe24.com/skin-skin35" target="_blank"></a>
 															<p>빌드</p>
 															<div class="interactive-hover-cont">
 																<div class="interactive-hover-area">
@@ -291,7 +312,7 @@
 																	<p>기술 스택 : tailwind, js</p>
 																	<p>협업 툴: figma, slack</p>
 																	<div class="btn-wrap">
-																			<a target="_blank" href="https://build112.cafe24.com/skin-skin35" class="btn-original">보러가기</a>
+																			<a target="_blank" href="https://build112.cafe24.com/skin-skin35" class="btn-original">VIEW</a>
 																	</div>
 															</div>
 															</div>
@@ -307,8 +328,76 @@
 											<p class="scroll fade-up">혁신적인 카페24 스킨 퍼블리싱</p>
 									</div>
 									<div class="inovative-wrap">
-											<ul>
-													<li class="isScroll inovative-elm-1">
+											<ul class="inovative-lists">
+													<li class="isScroll inovative-list">
+														<div class="inovative-img-cont">
+																	<picture>
+																			<img src="assets/images/inovative/arm.png" alt="armoire">
+																	</picture>
+															</div>
+															<div class="inovative-hover-cont">
+																	<div class="interactive-hover-area">
+																		<h4>아르모이아 반응형</h4>
+																		<p>html, scss, js</p>
+																		<p>제작기간 1달</p>
+																		<div class="btn-wrap">
+																				<a target="_blank" href="https://ecudemo357864.cafe24.com" class="btn-original">VIEW</a>
+																		</div>
+																	</div>
+															</div>
+													</li>
+													<li class="isScroll inovative-list">
+														<div class="inovative-img-cont">
+																	<picture>
+																			<img src="assets/images/inovative/dust.png" alt="slient dust">
+																	</picture>
+															</div>
+															<div class="inovative-hover-cont">
+																	<div class="interactive-hover-area">
+																		<h4>사일런트 더스트 반응형</h4>
+																		<p>html, scss, js</p>
+																		<p>제작기간 1주</p>
+																		<div class="btn-wrap">
+																				<a target="_blank" href="https://ecudemo363979.cafe24.com" class="btn-original">VIEW</a>
+																		</div>
+																	</div>
+															</div>
+													</li>
+													<li class="isScroll inovative-list">
+														<div class="inovative-img-cont">
+																	<picture>
+																			<img src="assets/images/inovative/flash.png" alt="flash on">
+																	</picture>
+															</div>
+															<div class="inovative-hover-cont">
+																	<div class="interactive-hover-area">
+																		<h4>플래시온 반응형</h4>
+																		<p>html, scss, js</p>
+																		<p>제작기간 1주</p>
+																		<div class="btn-wrap">
+																				<a target="_blank" href="https://ecudemo363066.cafe24.com" class="btn-original">VIEW</a>
+																		</div>
+																	</div>
+															</div>
+													</li>
+													<li class="isScroll inovative-list">
+														<div class="inovative-img-cont">
+																	<picture>
+																			<img src="assets/images/inovative/noir.png" alt="noirnote">
+																	</picture>
+															</div>
+															<div class="inovative-hover-cont">
+																	<div class="interactive-hover-area">
+																		<h4>노이어노트 반응형</h4>
+																		<p>html, scss, js</p>
+																		<p>제작기간 1주</p>
+																		<div class="btn-wrap">
+																				<a target="_blank" href="https://ecudemo363850.cafe24.com" class="btn-original">VIEW</a>
+																		</div>
+																	</div>
+															</div>
+													</li>
+													<li class="isScroll inovative-list">
 															<div class="inovative-img-cont">
 																	<picture>
 																			<img src="assets/images/inovative/rixo.png" alt="rixo">
@@ -322,7 +411,7 @@
 																	</div>
 															</div>
 													</li>
-													<li class="isScroll inovative-elm-2">
+													<li class="isScroll inovative-list">
 															<div class="inovative-img-cont">
 																	<picture>
 																			<img src="assets/images/inovative/rev.png" alt="reveur">
@@ -334,12 +423,12 @@
 																			<p>html, scss, js, tailwind</p>
 																			<p>제작기간 1달</p>
 																			<div class="btn-wrap">
-																					<a target="_blank" href="https://cnb2.cafe24.com/skin-skin18" class="btn-original">보러가기</a>
+																					<a target="_blank" href="https://cnb2.cafe24.com/skin-skin18" class="btn-original">VIEW</a>
 																			</div>
 																	</div>
 															</div>
 													</li>
-													<li class="isScroll inovative-elm-3">
+													<li class="isScroll inovative-list">
 															<div class="inovative-img-cont">
 																	<picture>
 																			<img src="assets/images/inovative/blinko.png" alt="blinko">
@@ -351,12 +440,12 @@
 																			<p>html, js, tailwind</p>
 																			<p>제작기간 3주</p>
 																			<div class="btn-wrap">
-																					<a target="_blank" href="https://cnb2.cafe24.com/skin-skin13" class="btn-original">보러가기</a>
+																					<a target="_blank" href="https://cnb2.cafe24.com/skin-skin13" class="btn-original">VIEW</a>
 																			</div>
 																	</div>
 															</div>
 													</li>
-													<li class="isScroll inovative-elm-4">
+													<li class="isScroll inovative-list">
 															<div class="inovative-img-cont">
 																	<picture>
 																			<img src="assets/images/inovative/blue.png" alt="blue shark">
@@ -368,12 +457,12 @@
 																			<p>html, js, tailwind</p>
 																			<p>제작기간 2주</p>
 																			<div class="btn-wrap">
-																					<a target="_blank" href="https://ecudemo324296.cafe24.com/" class="btn-original">보러가기</a>
+																					<a target="_blank" href="https://ecudemo324296.cafe24.com/" class="btn-original">VIEW</a>
 																			</div>
 																		</div>
 																	</div>
 													</li>
-													<li class="isScroll inovative-elm-5">
+													<li class="isScroll inovative-list">
 															<div class="inovative-img-cont">
 																	<picture>
 																			<img src="assets/images/inovative/daiana.png" alt="daiana">
@@ -387,23 +476,6 @@
 																	</div>
 															</div>
 													</li>
-													<li class="isScroll inovative-elm-6">
-														<div class="inovative-img-cont">
-																	<picture>
-																			<img src="assets/images/inovative/arm.png" alt="armoire">
-																	</picture>
-															</div>
-															<div class="inovative-hover-cont">
-																	<div class="interactive-hover-area">
-																		<h4>아르모이아 반응형</h4>
-																		<p>html, scss, js</p>
-																		<p>제작기간 1달</p>
-																		<div class="btn-wrap">
-																				<a target="_blank" href="https://ecudemo357864.cafe24.com/" class="btn-original">보러가기</a>
-																		</div>
-																	</div>
-															</div>
-													</li>
 											</ul>
 									</div>
 							</section>
@@ -414,9 +486,9 @@
 											<p class="scroll fade-up">페이지를 계속 만들겠다는 확고한 마음이 담겼어요</p>
 									</div>
 									<div class="infinite-swiper swiper scroll fade-up">
-											<div class="swiper-wrapper">
+											<div class="swiper-wrapper infinite-swiper-wrapper">
 											<!-- Slides -->
-											<div class="swiper-slide">
+											<div class="swiper-slide infinite-swiper-slide">
 													<a target="_blank" href="https://yeong1110.github.io/windowyeong" class="infinite-">
 															<span class="infinite-img-cont">
 																	<picture>
@@ -426,7 +498,7 @@
 															<span class="infinite-text">윈도우영</span>
 													</a>
 											</div>
-											<div class="swiper-slide">
+											<div class="swiper-slide infinite-swiper-slide">
 													<a target="_blank" href="#none" class="infinite-">
 															<span class="infinite-img-cont">
 																	<picture>
@@ -436,7 +508,7 @@
 															<span class="infinite-text">자바스크립트 챌린지</span>
 													</a>
 											</div>
-											<div class="swiper-slide">
+											<div class="swiper-slide infinite-swiper-slide">
 													<a target="_blank" href="#none" class="infinite-">
 															<span class="infinite-img-cont">
 																	<picture>
@@ -448,7 +520,7 @@
 											</div>
 
 											</div>
-											<div class="swiper-btn-wrap">
+											<div class="infinite-swiper-btn-wrap">
 													<div class="swiper-button-prev infinite-swiper-button-prev"></div>
 													<div class="swiper-button-next infinite-swiper-button-next"></div>
 											</div>
@@ -522,6 +594,18 @@
 														</div>
 														<div class="imagine-frame" data-src="NPKgQEY"></div>
 													</li>
+													<li class="imagine-list scroll fade-up">
+														<div class="imagine-thumb">
+															<img src="./assets/images/imagine/10.png" alt="hover">
+														</div>
+														<div class="imagine-frame" data-src="JooKwQp"></div>
+													</li>
+													<li class="imagine-list scroll fade-up">
+														<div class="imagine-thumb">
+															<img src="./assets/images/imagine/11.png" alt="typing css">
+														</div>
+														<div class="imagine-frame" data-src="YPPLXRv"></div>
+													</li>
 											</ul>
 									</div>
 							</section>
@@ -558,7 +642,13 @@
             </div>
         </aside>
         <aside class="top-area">
-            <a href="#top" id="go-top" title="back to top"><img src="assets/images/up2.svg" alt=""></a>
+            <a href="#top" id="go-top" title="back to top">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g>
+								<path d="M21.9727 12.1523L12.75 2.92969V24H11.25V2.92969L2.02734 12.1523L0.972656 11.0977L12 0.0703125L23.0273 11.0977L21.9727 12.1523Z" fill="#202020"/>
+								</g>
+							</svg>
+						</a>
         </aside>
 
 				<script src="assets/js/swiper.js"></script>

@@ -27,17 +27,9 @@ const handleScroll = () => {
 
     // 클래스별 변환 스타일 정의
     const transforms = {
-      "scrollRun1": {
-        inView: () => `translateX(-${percentage}%)`,
-        outView: () => `none`,
-      },
-      "scrollRun2": {
-        inView: () => `translateX(${percentage}%)`,
-        outView: () => `none`,
-      },
       "scrollBack": {
-        inView: () => `translateX(${percentage}%)`,
-        outView: () => `translateX(-${percentage}%)`,
+        inView: () => `translateX(-${percentage / 20}%)`,
+        outView: () => `translateX(${percentage / 100}%)`,
       },
       "scrollRotate": {
         inView: () => `rotate(${percentage}deg)`,
