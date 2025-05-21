@@ -22,7 +22,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-				color: #ffffff;
+        color: #ffffff;
         mix-blend-mode: difference;
       }
     }
@@ -57,9 +57,12 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
-    aspect-ratio: 1 / 0.6;
+    aspect-ratio: 1 / 0.7;
     border-radius: $main-br;
     overflow: hidden;
+    @include deviceLarge() {
+      aspect-ratio: 1 / 1;
+    }
     &:hover .interactive-text-cont {
       top: 0;
       border-radius: $main-br;
@@ -76,12 +79,16 @@
       margin: 0 auto;
     }
     &-link {
+      display: none;
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       opacity: 0;
       z-index: 2;
+      @include deviceLarge() {
+        // display: block;
+      }
     }
   }
   &-img-cont {
@@ -95,7 +102,6 @@
   }
   &-text-cont {
     $backdrop: light-dark(rgba(#ffffff, 0.5), rgba(#1e1e1e, 0.5));
-
     position: absolute;
     top: calc(100% - 50px);
     left: 0;
@@ -104,18 +110,17 @@
     transition: top 0.25s ease;
     background: $backdrop;
     p {
+      @include fontSize(s);
       padding: 15px 0;
     }
-		> p{
-			font-weight: 700;
-		}
+    > p {
+      @include fontSize(m);
+      font-weight: 700;
+    }
   }
   &-hover-cont {
     visibility: hidden;
     opacity: 0;
-    .interactive-hover-area {
-      padding: 20px;
-    }
     p {
       line-height: $lh;
       text-align: start;
@@ -123,6 +128,12 @@
       :first-of-type {
         margin-top: 20px;
       }
+    }
+  }
+  &-hover-area {
+    padding: 0 clamp(16px, 2vw, 20px);
+    @include deviceLarge() {
+      padding: clamp(16px, 2vw, 20px);
     }
   }
 }

@@ -4,6 +4,7 @@
     line-height: $lh;
     h2 {
 			margin-top: 48px;
+			padding-top: 24px;
     }
     @include deviceLarge() {
 			padding: 200px 0 0;

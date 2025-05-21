@@ -283,7 +283,7 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 16px;
+  padding: 0 16px;
 }
 @media screen and (min-width: 1440px) {
   header nav {
@@ -304,6 +304,12 @@ header nav h1 a {
   color: transparent;
 }
 header nav h1 a:last-child {
+  display: none;
+}
+header nav h1 a:last-child {
+  display: flex;
+}
+header nav h1 a:first-child {
   display: none;
 }
 header nav h1:hover a {
@@ -405,6 +411,7 @@ footer {
 }
 .i-am-wrap h2 {
   margin-top: 48px;
+  padding-top: 24px;
 }
 @media screen and (min-width: 1440px) {
   .i-am-wrap {
@@ -647,9 +654,14 @@ footer {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  aspect-ratio: 1/0.6;
+  aspect-ratio: 1/0.7;
   border-radius: 3px;
   overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  .interactive-list {
+    aspect-ratio: 1/1;
+  }
 }
 .interactive-list:hover .interactive-text-cont {
   top: 0;
@@ -667,6 +679,7 @@ footer {
   margin: 0 auto;
 }
 .interactive-list-link {
+  display: none;
   position: absolute;
   inset: 0;
   width: 100%;
@@ -693,17 +706,22 @@ footer {
   background: light-dark(rgba(255, 255, 255, 0.5), rgba(30, 30, 30, 0.5));
 }
 .interactive-text-cont p {
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+  font-weight: 400;
   padding: 15px 0;
 }
 .interactive-text-cont > p {
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-size: clamp(0.875rem, 1.8vw, 1rem);
+  font-weight: 400;
   font-weight: 700;
 }
 .interactive-hover-cont {
   visibility: hidden;
   opacity: 0;
-}
-.interactive-hover-cont .interactive-hover-area {
-  padding: 20px;
 }
 .interactive-hover-cont p {
   line-height: 1.5;
@@ -712,6 +730,14 @@ footer {
 }
 .interactive-hover-cont p :first-of-type {
   margin-top: 20px;
+}
+.interactive-hover-area {
+  padding: 0 clamp(16px, 2vw, 20px);
+}
+@media screen and (min-width: 1440px) {
+  .interactive-hover-area {
+    padding: clamp(16px, 2vw, 20px);
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -855,13 +881,21 @@ footer {
   transition: 0.36s ease;
 }
 .inovative-hover-cont h4 {
-  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-size: clamp(0.875rem, 1.8vw, 1rem);
+  font-weight: 400;
   font-weight: 700;
   margin-bottom: 15px;
+  text-align: center;
 }
 .inovative-hover-cont p {
-  text-align: start;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+  font-weight: 400;
   padding: 2px 0;
+  text-align: center;
 }
 .inovative-hover-cont p :first-of-type {
   margin-top: 20px;
@@ -870,19 +904,12 @@ footer {
   font-weight: bold;
 }
 .inovative-hover-area {
-  padding: clamp(20px, 2vw, 40px);
+  padding: clamp(16px, 2vw, 40px);
 }
-.inovative-hover-area .inovative-link-area {
-  margin-bottom: 10px;
-}
-.inovative p {
-  text-align: center;
-}
-.inovative .btn-wrap {
+.inovative-btn-wrap {
+  margin-top: 24px;
   display: flex;
-  justify-content: space-around;
-  margin: 25px 0 0;
-  padding: 0;
+  justify-content: center;
 }
 
 .infinite-section {
